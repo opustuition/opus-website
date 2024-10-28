@@ -1,0 +1,136 @@
+.value-prop {
+    margin: 6rem auto 2rem auto;
+    padding: 0 .6rem;
+}
+
+.testimonials {
+    overflow-x: scroll;
+    overflow-y: visible;
+    position: relative;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.testimonial-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-scroll {
+    height: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.testimonial {
+    display: inline-block;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.testimonial-photo {
+    background: yellow;
+    border-radius: 50%;
+    height: 250px;
+    overflow: hidden;
+    width: 250px;
+}
+
+.testimonial-text{
+    background: #fff;
+    border-radius: 20px;
+    color: #000;
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    top: -30px;
+    white-space: normal;
+}
+
+.features {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.features ul {
+    column-gap: 1rem;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.features ul > li {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feature {
+    background: #fff;
+    border-radius: 10px;
+    color: #000;
+    overflow: hidden;
+}
+
+.feature-img {
+    background: lightskyblue;
+    height: 8rem;
+}
+
+.feature-text {
+    padding: 1rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-big {
+    font-size: 8rem;
+}
+
+.stat-small {
+    font-size: 2rem;
+}
+
+.guarantee h2 {
+    font-family: "LoRes", sans-serif;
+    font-size: 2rem;
+}
+
+.waitlist {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.features,
+.stats,
+.guarantee,
+.waitlist {
+    padding: 0 .6rem;
+}
+
+@media (min-width: 900px) {
+
+    .value-prop h1,
+    .guarantee h2 {
+        font-family: "LoRes", sans-serif;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .features ul {
+        column-gap: 3rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .stats {
+        column-gap: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+}
