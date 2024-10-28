@@ -1,3 +1,36 @@
+.bg-squiggle-orange {
+    background-image: url('/css/branding/squiggle-orange.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10rem;
+    position: fixed;
+    width: 10rem;
+    right: -3rem;
+    top: 2rem;
+}
+
+.bg-squiggle-green {
+    background-image: url('/css/branding/squiggle-green.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 8rem;
+    position: fixed;
+    width: 8rem;
+    left: -1rem;
+    top: 26rem;
+}
+
+.bg-squiggle-blue {
+    background-image: url('/css/branding/squiggle-blue.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 6rem;
+    position: fixed;
+    width: 6rem;
+    left: 1rem;
+    top: 9rem;
+}
+
 a {
     color: #1a33ad;
   }
@@ -76,6 +109,7 @@ a {
   
   .wrapper {
     margin: 0 auto;
+    position: absolute;
     width: 100%;
   }
   
@@ -155,9 +189,14 @@ a {
 .menu-open {
     background: none;
     color: #fff;
+    cursor: pointer;
     font-size: .8rem;
     font-weight: bold;
     width: 1.6rem;
+  }
+
+  .menu-open:hover {
+    opacity: .6;
   }
   
   .menu-open div {
@@ -358,6 +397,38 @@ a {
   }
   
   @media (min-width: 900px) {
+
+    .bg-squiggle-orange {
+        height: 20rem;
+        width: 20rem;
+        right: -3rem;
+        top: 0;
+    }
+
+    .bg-squiggle-green {
+        height: 16rem;
+        width: 16rem;
+        left: -1rem;
+        top: 20rem;
+    }
+
+    .bg-squiggle-blue {
+        height: 10rem;
+        width: 10rem;
+        left: 1rem;
+        top: 8rem;
+    }
+
+    .bg-squiggle-pink {
+        background-image: url('/css/branding/squiggle-pink.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 10rem;
+        position: fixed;
+        width: 10rem;
+        left: 12rem;
+        top: 30rem;
+    }
 
     h1 {
         font-size: 2rem;

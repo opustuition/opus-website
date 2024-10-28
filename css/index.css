@@ -47,7 +47,7 @@
 }
 
 .features {
-    margin: 0 auto;
+    margin: 4rem auto;
     max-width: 800px;
 }
 
@@ -95,6 +95,10 @@
     font-size: 2rem;
 }
 
+.guarantee {
+    margin: 4rem 0 2rem 0;
+}
+
 .guarantee h2 {
     font-family: "LoRes", sans-serif;
     font-size: 2rem;
@@ -113,6 +117,22 @@
 }
 
 @media (min-width: 900px) {
+
+    .value-prop {
+        padding: 1rem 0 4rem 0;
+    }
+
+    .features {
+        margin: 12rem auto;
+    }
+
+    .guarantee {
+        margin: 12rem 0 4rem 0;
+    }
+
+    .waitlist {
+        margin: 0 0 12rem 0;
+    }
 
     .value-prop h1,
     .guarantee h2 {
