@@ -1,0 +1,95 @@
+.waitlist-subjects-primary {
+    align-items: center;
+    column-gap: .6rem;
+    display: grid;
+    grid-template-areas: "label label" "subject-select remove";
+    grid-template-columns: 1fr auto;
+}
+
+.waitlist-subjects-primary .waitlist-subject-label {
+    grid-area: label;
+}
+
+.waitlist-subjects-primary .waitlist-subject-select {
+    grid-area: subject-select;
+}
+
+.waitlist-subjects-primary button {
+    grid-area: remove;
+}
+
+.waitlist-subjects-secondary-lower,
+.waitlist-subjects-secondary-upper {
+    align-items: center;
+    column-gap: .6rem;
+    display: grid;
+    grid-template-areas: "subject-label band-label band-label" "subject-select band-select remove";
+    grid-template-columns: 1fr auto auto;
+}
+
+.waitlist-subjects-secondary-lower .waitlist-subject-label,
+.waitlist-subjects-secondary-upper .waitlist-subject-label {
+    grid-area: subject-label;
+}
+
+.waitlist-subjects-secondary-lower .waitlist-subject-select,
+.waitlist-subjects-secondary-upper .waitlist-subject-select {
+    grid-area: subject-select;
+}
+
+.waitlist-subjects-secondary-lower .waitlist-band-select,
+.waitlist-subjects-secondary-upper .waitlist-band-select {
+    grid-area: band-select;
+}
+
+.waitlist-subjects-secondary-lower button,
+.waitlist-subjects-secondary-upper button {
+    grid-area: remove;
+}
+
+.waitlist-subjects-primary select,
+.waitlist-subjects-secondary-lower select,
+.waitlist-subjects-secondary-upper select {
+    margin: 0;
+}
+
+.waitlist-subjects-templates {
+    display: none;
+}
+
+.waitlist-subject-section {
+    display: grid;
+    margin: 2rem 0;
+    row-gap: .6rem;
+}
+
+.waitlist-subject-heading {
+    text-align: center;
+}
+
+.waitlist-add-subject {
+    background: #d5dce8;
+    border: none;
+    border-radius: 10px;
+    font-size: .8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.waitlist-add-subject:hover {
+    opacity: .6;
+}
+
+.waitlist-subject-remove {
+    background: #d5dce8;
+    border: none;
+    border-radius: 10px;
+    font-size: .8em;
+    padding: .6rem;
+}
+
+.waitlist-subject-remove:hover {
+    opacity: .6;
+}
