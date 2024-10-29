@@ -123,6 +123,7 @@ a {
   }
   
   .footer {
+    color: #000;
     background: #eff5ff;
     padding: 8rem 2rem;
     flex: 1;
