@@ -32,16 +32,16 @@
 }
 
 a {
-    color: #1a33ad;
+    color: #ffdd34;
   }
   
   a:hover {
-    opacity: .6;
+    color: #fff;
     transition: all .2s ease;
   }
   
   a:visited {
-    color: #1a33ad;
+    color: #ffdd34;
   }
   
   div {
@@ -127,6 +127,19 @@ a {
     background: #eff5ff;
     padding: 8rem 2rem;
     flex: 1;
+  }
+
+  .footer a {
+    color: #1a33ad;
+  }
+  
+  .footer a:hover {
+    opacity: .6;
+    transition: all .2s ease;
+  }
+  
+  .footer a:visited {
+    color: #1a33ad;
   }
   
   .footer nav {
@@ -226,11 +239,11 @@ a {
   .sidebar {
     background: #3B6ED8;
     height: 100vh;
+    left: -100%;
     position: fixed;
-    right: 0;
     top: 0;
-    widtH: 0;
-    transition: width .2s ease;
+    width: 100vw;
+    transition: left .3s ease;
     z-index: 20;
   }
   
@@ -249,7 +262,7 @@ a {
   }
   
   .sidebar.expand {
-    width: 100vw;
+    left: 0;
   }
 
   .hidden-iframe {
@@ -279,7 +292,7 @@ a {
   .cta:hover,
   a.cta:hover {
     background: #000;
-    color: #d5d5d5;
+    color: #fff;
     opacity: 1;
   }
   
@@ -452,6 +465,10 @@ a {
 
     .header-content {
         grid-template-columns: 1fr auto 1fr;
+    }
+
+    .sidebar {
+        max-width: 600px;
     }
     
   }

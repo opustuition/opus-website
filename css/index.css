@@ -1,6 +1,12 @@
 .value-prop {
     margin: 8rem auto 4rem auto;
     padding: 0 .6rem;
+    opacity: .2;
+    transition: opacity 1s ease;
+}
+
+.value-prop.intersecting {
+    opacity: 1;
 }
 
 .testimonials {
@@ -95,12 +101,20 @@
 .feature-img {
     background: lightskyblue;
     height: 10rem;
+    overflow: hidden;
 }
 
 .feature-img > img {
     display: block;
     height: 100%;
     margin: 0 auto;
+    position: relative;
+    top: 80%;
+    transition: top .8s ease;
+}
+
+.feature-img.intersecting  > img {
+    top: 0;
 }
 
 .feature > h2 {
@@ -127,6 +141,12 @@
 
 .guarantee {
     margin: 12rem 0 2rem 0;
+    opacity: .2;
+    transition: opacity 1.2s ease;
+}
+
+.guarantee.intersecting {
+    opacity: 1;
 }
 
 .guarantee h2 {
