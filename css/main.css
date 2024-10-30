@@ -345,6 +345,10 @@ a {
     text-align: center;
   }
 
+  .form-section .form-alt {
+    margin-top: 1rem;
+  }
+
   .form-alt {
     background: #eff5ff;
     border-radius: 20px;
