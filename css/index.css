@@ -1,5 +1,5 @@
 .value-prop {
-    margin: 10rem auto 4rem auto;
+    margin: 8rem auto 4rem auto;
     padding: 0 .6rem;
 }
 
@@ -36,12 +36,29 @@
     width: 250px;
 }
 
-.testimonial-text{
+.testimonial-text {
     background: #eff5ff;
     border-radius: 20px;
     color: #000;
     max-width: 250px;
     padding: 1rem;
+    position: relative;
+    top: -30px;
+    white-space: normal;
+}
+
+.testimonial-text::before {
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    content: '';
+    position: absolute;
+    bottom: 100%;
+}
+
+.testimonial-source {
+    font-size: .9rem;
+    max-width: 250px;
+    padding: 1rem 0 0 0;
     position: relative;
     top: -30px;
     white-space: normal;
@@ -80,8 +97,15 @@
     height: 10rem;
 }
 
+.feature-img > img {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .feature > h2 {
-    margin-bottom: 0;
+    margin: 1rem auto 0 auto;
+    max-width: 600px;
     padding: 0 1rem;
 }
 
@@ -123,6 +147,30 @@
     padding: 0 .6rem;
 }
 
+@media (min-width: 600px) {
+
+    .value-prop h1,
+    .guarantee h2 {
+        font-family: "LoRes", sans-serif;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .features ul {
+        column-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (min-width: 760px) {
+
+    .features ul {
+        column-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media (min-width: 900px) {
 
     .value-prop {
@@ -138,20 +186,12 @@
         margin: 12rem 0 4rem 0;
     }
 
-    .value-prop h1,
-    .guarantee h2 {
-        font-family: "LoRes", sans-serif;
-        font-size: 2.6rem;
-        text-align: center;
-    }
-
     .testimonial {
         font-size: .9rem;
     }
 
-    .features ul {
-        column-gap: 1rem;
-        grid-template-columns: 1fr 1fr 1fr;
+    .testimonial-source {
+        font-size: .8rem;
     }
 
     .feature {
