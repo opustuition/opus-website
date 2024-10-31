@@ -127,6 +127,15 @@
     padding: 1rem;
 }
 
+.stats {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 1000px;
+    row-gap: 8rem;
+}
+
 .stat {
     text-align: center;
 }
@@ -137,6 +146,10 @@
 
 .stat-small {
     font-size: 2rem;
+}
+
+.stat-bands > .stat-big {
+    font-size: 4rem;
 }
 
 .guarantee {
@@ -221,8 +234,22 @@
     .stats {
         column-gap: 3rem;
         display: grid;
+        grid-template-areas: 'enrolled al' 'bands bands';
         grid-template-columns: 1fr 1fr;
         margin: 0 auto;
         max-width: 1000px;
+        row-gap: 6rem;
+    }
+
+    .stat-enrolled {
+        grid-area: enrolled;
+    }
+
+    .stat-al {
+        grid-area: al;
+    }
+
+    .stat-bands {
+        grid-area: bands;
     }
 }
