@@ -31,17 +31,14 @@
     top: 9rem;
 }
 
-a {
+a,
+a:visited {
   color: #ffdd34;
+  transition: all .2s ease;
 }
 
 a:hover {
   color: #fff;
-  transition: all .2s ease;
-}
-
-a:visited {
-  color: #ffdd34;
 }
   
 div {
@@ -58,6 +55,21 @@ p {
 h1 {
   font-family: 'LoRes', sans-serif;
   letter-spacing: .1em;
+}
+
+section > h2 {
+  margin: 2rem auto .6rem auto;
+  max-width: 600px;
+}
+
+ol {
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+ol > li {
+  margin: 0 0 1rem 0;
 }
 
 button {
@@ -130,7 +142,7 @@ body {
 }
 
 .footer a {
-  color: #1a33ad;
+  color: #3B6ED8;
 }
 
 .footer a:hover {
@@ -139,7 +151,7 @@ body {
 }
 
 .footer a:visited {
-  color: #1a33ad;
+  color: #3B6ED8;
 }
 
 .footer nav {
@@ -175,7 +187,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  margin: 0 auto 4rem auto;
+  margin: 4rem auto;
   max-width: 600px;
   row-gap: 1rem;
 }
@@ -455,11 +467,23 @@ a.cta:hover {
 @media (max-width: 370px) {
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+
+  h1 {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .header-content {
+      grid-template-columns: 1fr auto 1fr;
+  }
 
   .header .logo {
       text-align: center;
   }
+}
+
+@media (min-width: 768px) {
 
   .footer nav {
     display: flex;
@@ -509,14 +533,6 @@ a.cta:hover {
       width: 10rem;
       left: 12rem;
       top: 30rem;
-  }
-
-  h1 {
-      font-size: 2rem;
-  }
-
-  .header-content {
-      grid-template-columns: 1fr auto 1fr;
   }
 
   .sidebar {
