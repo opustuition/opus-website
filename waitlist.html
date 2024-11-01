@@ -1,0 +1,108 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+permalink: /waitlist/
+layout: default
+title: Waitlist
+custom_css:
+- waitlist
+custom_js:
+- waitlist
+---
+
+<section class="form-section">
+    <h1>Join Our Waitlist</h1>
+    <p>
+        Please note that the waiting list length may vary with demand. We will reach out within 2 working days to provide an estimated wait time, allowing you to explore other educational options in the meantime. Thank you for your patience and understanding.
+    </p>
+    <form class="waitlist-form" target="hidden-iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdu2fcilurj1761_xYaFmaLkDfqpK00UD5jhSMzQlw2RzAIIQ/formResponse">
+        <section>
+            <h2>Contact Information</h2>
+            <div class="form-card">
+                <label>Your Full Name:</label>
+                <input type="text" required="true" name="entry.720511275">
+                <label>Email:</label>
+                <input type="email" required="true" name="entry.1893969389">
+                <label>Address:</label>
+                <input type="text" required="true" name="entry.2035073935">
+                <label>Phone Number:</label>
+                <input type="text" required="true" name="entry.121005764">
+            </div>
+        </section>
+        <section>
+            <h2>Your Child's Particulars</h2>
+            <div class="form-card light-orange">
+                <label>Child's Name:</label>
+                <input type="text" required="true" name="entry.1529155747">
+                <label>Your Relationship to Child:</label>
+                <input type="text" required="true" name="entry.913926746" placeholder="Ex: mother, father, grandparent">
+                <label>Child's School:</label>
+                <input type="text" required="true" name="entry.240395321">
+                <label>Child's Age:</label>
+                <input type="number" required="true" name="entry.1875054958" min="0">
+                <label>Child's Level of Study:</label>
+                <select required="true" name="entry.1000083747" class="study-level-select">
+                    <option value="Primary School">Primary School</option>
+                    <option value="Lower Secondary School">Lower Secondary School</option>
+                    <option value="Upper Secondary School">Upper Secondary School</option>
+                </select>
+            </div>
+        </section>
+        <section>
+            <h2>Subject Selection</h2>
+            <div class="form-card green">
+                <div class="waitlist-subject-section">
+                    <div class="waitlist-subject-fields"></div>
+                    <button class="waitlist-add-subject">Add Subject</button>
+                    <input type="hidden" name="entry.2012795183" class="waitlist-subjects-hidden">
+                </div>
+            </div>
+        </section>
+        <button class="cta">Submit</button>
+    </form>
+    <iframe class="hidden-iframe" name="hidden-iframe"></iframe>
+    <div class="form-success">Thank you! Your submission was successful. <a href="{{ site.url }}/waitlist">Submit another waitlist application for a different student.</a></div>
+</section>
+
+
+<div class="waitlist-subjects-templates">
+    <div class="waitlist-subject-field waitlist-subjects-primary">
+        <label class="waitlist-subject-label">Subject:</label>
+        <select required="true" class="waitlist-subject-select">
+            <option value="English">English</option>
+            <option value="Math">Math</option>
+            <option value="Science">Science</option>
+        </select>
+        <button onClick="onRemoveSubject(this)" class="waitlist-subject-remove">Remove</button>
+    </div>
+    <div class="waitlist-subject-field waitlist-subjects-secondary-lower">
+        <label class="waitlist-subject-label">Subject:</label>
+        <select required="true" class="waitlist-subject-select">
+            <option value="English">English</option>
+            <option value="Math">Math</option>
+            <option value="Science">Science</option>
+        </select>
+        <label class="waitlist-band-label">Band:</label>
+        <select required="true" class="waitlist-band-select">
+            <option value="G1">G1</option>
+            <option value="G2">G2</option>
+            <option value="G3">G3</option>
+        </select>
+        <button onClick="onRemoveSubject(this)" class="waitlist-subject-remove">Remove</button>
+    </div>
+    <div class="waitlist-subject-field waitlist-subjects-secondary-upper">
+        <label class="waitlist-subject-label">Subject:</label>
+        <select required="true" class="waitlist-subject-select">
+            <option value="English">English</option>
+            <option value="A Math">A Math</option>
+            <option value="E Math">E Math</option>
+        </select>
+        <label class="waitlist-band-label">Band:</label>
+        <select required="true" class="waitlist-band-select">
+            <option value="G1">G1</option>
+            <option value="G2">G2</option>
+            <option value="G3">G3</option>
+        </select>
+        <button onClick="onRemoveSubject(this)" class="waitlist-subject-remove">Remove</button>
+    </div>
+</div>

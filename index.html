@@ -1,0 +1,165 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+custom_css:
+- index
+custom_js:
+- index
+---
+
+<section class="value-prop">
+    <h1>Home Tuition, Guaranteed Results</h1>
+    <p>
+        OPUS Tuition specializes in private English, Math, and Science tuition for primary and secondary students. We provide the best learning experience for students by offering the comfort and flexibility of learning at home along with the professional resources and progress tracking found in a tuition center.
+    </p>
+</section>
+
+<section class="testimonials">
+    <div class="arrow-l"></div>
+    <div class="arrow-r"></div>
+    <div class="testimonial-scroll">
+        {% include testimonial.html
+            img="bean-yellow-bg-orange.svg"
+            source="Tan Wei Jie"
+            text="My son used to dread school, but since starting at OPUS, he's actually excited to learn and has shown such amazing improvement!"
+        %}
+        {% include testimonial.html
+            img="bean-purple-bg-pink.svg"
+            source="Nurul Aisyah Binte Rahim"
+            text="We tried everything, but only OPUS got my daughter to enjoy studying, and her grades have skyrocketed within just two months!"
+        %}
+        {% include testimonial.html
+            img="bean-green-bg-yellow.svg"
+            source="Priya Nandini Menon"
+            text="OPUS is a game-changer—my child went from failing to scoring top marks, and now even I understand how to support his studies better."
+        %}
+        {% include testimonial.html
+            img="bean-orange-bg-blue.svg"
+            source="Jason Pereira"
+            text="I never thought my son would excel in math, but the tutors here make it so engaging, and his scores are unbelievable now!"
+        %}
+        {% include testimonial.html
+            img="bean-yellow-bg-purple.svg"
+            source="Ong Mei Ling"
+            text="Thanks to OPUS, my daughter not only understands her subjects but loves going to tuition. We saw a drastic change in just a month!"
+        %}
+        {% include testimonial.html 
+            img="bean-blue-bg-light-orange.svg"
+            source="Muhammad Iqbal Bin Ahmad"
+            text="The tutors at OPUS make every lesson fun, and for the first time, my child looks forward to studying. Her grades are proof of their impact" %}
+        {% include testimonial.html
+            img="bean-pink-bg-green.svg"
+            source="Sarah Rodrigues"
+            text="In just three months, OPUS transformed my son's attitude towards school. He's confident, happy, and performing exceptionally well!"
+        %}
+        {% include testimonial.html
+            img="bean-orange-bg-yellow.svg"
+            source="Lim Xiao Ling"
+            text="I thought my child would never enjoy studying, but OPUS changed that. He's finally engaged and doing better than ever in all subjects."
+        %}
+        {% include testimonial.html
+            img="bean-blue-bg-pink.svg"
+            source="Lee Guan Teck"
+            text="The personalized support at OPUS is incredible; my daughter now scores in the 90s, and I understand how to help her progress even further."
+        %}
+    </div>
+</section>
+
+<section class="features">
+    <ul>
+        <li>
+            <div class="feature">
+                <div class="feature-img" style="background:#C492CF;">
+                    <img src="{{ site.url }}/img/assets/beans/bean-tailored.svg"/>
+                </div>
+                <h2>Personalized Learning Plans</h2>
+                <p class="feature-text">
+                    Tailored to fit each child’s unique learning style and pace, ensuring they get the support they need to excel.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="feature">
+                <div class="feature-img" style="background:#0AA15D;">
+                    <img src="{{ site.url }}/img/assets/beans/bean-scheduling.svg"/>
+                </div>
+                <h2>Flexible Scheduling</h2>
+                <p class="feature-text">
+                    Allows families to plan sessions around their busy lives and holidays, with make-up lessons available for uninterrupted learning.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="feature">
+                <div class="feature-img" style="background:#D8BB2B;">
+                    <img src="{{ site.url }}/img/assets/track-progress.svg"/>
+                </div>
+                <h2>Progress Tracking</h2>
+                <p class="feature-text">
+                    Parents stay fully informed of their child's learning through OPUS Tuition's progress tracking system, with homework and lesson updates accessible anytime, anywhere.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="feature">
+                <div class="feature-img" style="background:#8A67C9;">
+                    <img src="{{ site.url }}/img/assets/star.svg"/>
+                </div>
+                <h2>Experienced Trained Tutors</h2>
+                <p class="feature-text">
+                    Skilled subject experts are carefully vetted and undergo two weeks of intensive training for engaging and motivating lessons that drive effective learning.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="feature">
+                <div class="feature-img" style="background:#DB9627;">
+                    <img src="{{ site.url }}/img/assets/beans/bean-diverse.svg"/>
+                </div>
+                <h2>Comprehensive Learning Materials</h2>
+                <p class="feature-text">
+                    Professionally designed materials that align with the curriculum and cater to diverse learning styles, empowering students to prepare thoroughly for exams and reach their full potential.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="feature">
+                <div class="feature-img" style="background:#6178E1;">
+                    <img src="{{ site.url }}/img/assets/beans/bean-home.svg"/>
+                </div>
+                <h2>Seamless Home-Based Learning</h2>
+                <p class="feature-text">
+                    Enjoy the convenience of home-based lessons that bring the structure and support of a tuition center directly to your child.
+                </p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="stats">
+    <div class="stat stat-enrolled">
+        <div class="stat-big"><span id="enrollment-count">400</span>+</div>
+        <div class="stat-small">students enrolled</div>
+    </div>
+    <div class="stat stat-al">
+        <div class="stat-big"><span id="al-count">93.3</span>%</div>
+        <div class="stat-small">AL1-AL3 achieved</div>
+    </div>
+    <div class="stat stat-bands">
+        <div class="stat-big">G1, G2, G3</div>
+        <div class="stat-small">we cater to all bands</div>
+    </div>
+</section>
+
+<section class="guarantee">
+    <h2>Money-Back Guarantee</h2>
+    <p>
+        OPUS Tuition guarantees that, within a 12-month period, your student will achieve at least a 10% improvement in their academic results. If the student does not meet the specified improvement benchmark, we will process a full refund of the tuition fees paid for the year, ensuring that the investment in your student's education is risk-free. <a href="{{ site.url }}/guarantee">See our full money-back policy for details.</a>
+    </p>
+</section>
+
+<section class="waitlist">
+    <a class="cta" href="{{ site.url }}/waitlist">Join Wailist</a>
+</section>
