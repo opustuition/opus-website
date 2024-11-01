@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 permalink: /waitlist/
 layout: default
+title: Waitlist
 custom_css:
 - waitlist
 custom_js:
@@ -14,35 +15,49 @@ custom_js:
     <p>
         Please note that the waiting list length may vary with demand. We will reach out within 2 working days to provide an estimated wait time, allowing you to explore other educational options in the meantime. Thank you for your patience and understanding.
     </p>
-    <form class="waitlist-form form-alt" target="hidden-iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdu2fcilurj1761_xYaFmaLkDfqpK00UD5jhSMzQlw2RzAIIQ/formResponse">
-        <label>Your Full Name:</label>
-        <input type="text" required="true" name="entry.720511275">
-        <label>Email:</label>
-        <input type="email" required="true" name="entry.1893969389">
-        <label>Address:</label>
-        <input type="text" required="true" name="entry.2035073935">
-        <label>Phone Number:</label>
-        <input type="text" required="true" name="entry.121005764">
-        <label>Child's Name:</label>
-        <input type="text" required="true" name="entry.1529155747">
-        <label>Relationship with Child:</label>
-        <input type="text" required="true" name="entry.913926746">
-        <label>Child's School:</label>
-        <input type="text" required="true" name="entry.240395321">
-        <label>Child's Age:</label>
-        <input type="text" required="true" name="entry.1875054958">
-        <label>Child's Level of Study:</label>
-        <select required="true" name="entry.1000083747" class="study-level-select">
-            <option value="Primary School">Primary School</option>
-            <option value="Lower Secondary School">Lower Secondary School</option>
-            <option value="Upper Secondary School">Upper Secondary School</option>
-        </select>
-        <div class="waitlist-subject-section">
-            <div class="waitlist-subject-heading">Subject Selection</div>
-            <div class="waitlist-subject-fields"></div>
-            <button class="waitlist-add-subject">Add Subject</button>
-            <input type="hidden" name="entry.2012795183" class="waitlist-subjects-hidden">
-        </div>
+    <form class="waitlist-form" target="hidden-iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdu2fcilurj1761_xYaFmaLkDfqpK00UD5jhSMzQlw2RzAIIQ/formResponse">
+        <section>
+            <h2>Contact Information</h2>
+            <div class="form-card">
+                <label>Your Full Name:</label>
+                <input type="text" required="true" name="entry.720511275">
+                <label>Email:</label>
+                <input type="email" required="true" name="entry.1893969389">
+                <label>Address:</label>
+                <input type="text" required="true" name="entry.2035073935">
+                <label>Phone Number:</label>
+                <input type="text" required="true" name="entry.121005764">
+            </div>
+        </section>
+        <section>
+            <h2>Your Child's Particulars</h2>
+            <div class="form-card light-orange">
+                <label>Child's Name:</label>
+                <input type="text" required="true" name="entry.1529155747">
+                <label>Your Relationship to Child:</label>
+                <input type="text" required="true" name="entry.913926746" placeholder="Ex: mother, father, grandparent">
+                <label>Child's School:</label>
+                <input type="text" required="true" name="entry.240395321">
+                <label>Child's Age:</label>
+                <input type="number" required="true" name="entry.1875054958" min="0">
+                <label>Child's Level of Study:</label>
+                <select required="true" name="entry.1000083747" class="study-level-select">
+                    <option value="Primary School">Primary School</option>
+                    <option value="Lower Secondary School">Lower Secondary School</option>
+                    <option value="Upper Secondary School">Upper Secondary School</option>
+                </select>
+            </div>
+        </section>
+        <section>
+            <h2>Subject Selection</h2>
+            <div class="form-card green">
+                <div class="waitlist-subject-section">
+                    <div class="waitlist-subject-fields"></div>
+                    <button class="waitlist-add-subject">Add Subject</button>
+                    <input type="hidden" name="entry.2012795183" class="waitlist-subjects-hidden">
+                </div>
+            </div>
+        </section>
         <button class="cta">Submit</button>
     </form>
     <iframe class="hidden-iframe" name="hidden-iframe"></iframe>

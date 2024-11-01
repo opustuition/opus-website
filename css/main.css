@@ -83,10 +83,22 @@ button {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="number"] {
+  background: #e6ecf8;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 4px 4px 0 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  padding: .8rem;
+  width: 100%;
+}
+
 select {
-  background: #eff5ff;
-  border: 1px solid #000;
-  border-radius: 10px;
+  background: #e6ecf8;
+  border: 2px solid #000;
+  border-radius: 4px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: inherit;
@@ -249,6 +261,10 @@ body {
   text-decoration: none;;
 }
 
+.header .logo:hover {
+  opacity: .6;
+}
+
 .header .cta-box {
   text-align: right;
 }
@@ -309,6 +325,19 @@ body {
   width: 100vw;
   transition: left .3s ease;
   z-index: 20;
+}
+
+.sidebar-wrapper {
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.sidebar-wrapper.expand {
+  display: block;
 }
 
 .sidebar nav {
@@ -422,36 +451,57 @@ a.cta:hover {
   text-align: center;
 }
 
-.form-section .form-alt {
+.form-section .form-card {
   margin-top: 1rem;
 }
 
-.form-alt {
+.form-card {
   background: #eff5ff;
   border-radius: 20px;
   box-sizing: border-box;
   color: #000;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   max-width: 600px;
-  padding: 2rem 1.5rem;
+  overflow: hidden;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  position: relative;
 }
 
-.form-alt input {
+.form-card::before {
+  background: #D8BB2B;
+  content: "";
+  position: absolute;
+  height: .8rem;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.form-card.light-orange::before {
+  background: #DB9627;
+}
+
+.form-card.green::before {
+  background: #0AA15D;
+}
+
+.form-card input {
   display: block;
 }
 
-.form-alt input[type="submit"] {
+.form-card input[type="submit"] {
   margin: 0 auto;
 }
 
-.form-alt input[type="text"],
-.form-alt input[type="email"],
-.form-alt input[type="password"],
-.form-alt select {
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"],
+.form-card input[type="number"],
+.form-card select {
   margin: 0 0 1.5rem 0;
 }
 
-.form-alt.hide {
+.form-card.hide {
   display: none;
 }
 

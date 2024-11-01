@@ -78,6 +78,7 @@ function onSubmitForm(e) {
   document.getElementsByClassName("waitlist-subjects-hidden")[0].value = subjectStr;
 
   document.getElementsByClassName("form-success")[0].classList.add("show");
-  document.getElementsByClassName("form-alt")[0].classList.add("hide");
+  document.getElementsByClassName("form-success")[0].scrollIntoView({ behavior: "instant", block: "end" });
+  document.getElementsByClassName("waitlist-form")[0].classList.add("hide");
   this.submit();
 }

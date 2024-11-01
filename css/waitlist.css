@@ -59,7 +59,6 @@
 
 .waitlist-subject-section {
     display: grid;
-    margin: 2rem 0;
     row-gap: .6rem;
 }
 
@@ -78,6 +77,11 @@
     text-transform: uppercase;
 }
 
+.waitlist-add-subject::before {
+    content: "+";
+    margin: 0 .6rem 0 0;
+}
+
 .waitlist-add-subject:hover {
     opacity: .6;
 }
@@ -92,4 +96,12 @@
 
 .waitlist-subject-remove:hover {
     opacity: .6;
+}
+
+.waitlist-subject-field {
+    margin: 0 0 1.5rem 0;
+}
+
+.waitlist-form.hide {
+    display: none;
 }
