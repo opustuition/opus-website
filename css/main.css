@@ -96,14 +96,30 @@ input[type="number"] {
 }
 
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background: #e6ecf8;
   border: 2px solid #000;
   border-radius: 4px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: inherit;
-  padding: .8rem;
+  padding: .8rem 2.4rem .8rem .8rem;
   width: 100%;
+}
+
+.select {
+  position: relative;
+}
+
+.select::after {
+  border: 8px solid transparent;
+  border-top: 8px solid #000;
+  content: "";
+  margin: 6px 8px 0 0;
+  position: absolute;
+  top: 1rem;
+  right: 0;
 }
 
 .sr-only {

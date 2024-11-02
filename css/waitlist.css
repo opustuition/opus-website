@@ -32,13 +32,13 @@
     grid-area: subject-label;
 }
 
-.waitlist-subjects-secondary-lower .waitlist-subject-select,
-.waitlist-subjects-secondary-upper .waitlist-subject-select {
+.waitlist-subjects-secondary-lower .waitlist-subject-select-wrapper,
+.waitlist-subjects-secondary-upper .waitlist-subject-select-wrapper {
     grid-area: subject-select;
 }
 
-.waitlist-subjects-secondary-lower .waitlist-band-select,
-.waitlist-subjects-secondary-upper .waitlist-band-select {
+.waitlist-subjects-secondary-lower .waitlist-band-select-wrapper,
+.waitlist-subjects-secondary-upper .waitlist-band-select-wrapper {
     grid-area: band-select;
 }
 

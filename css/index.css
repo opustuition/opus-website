@@ -55,7 +55,7 @@
 
 .testimonial-text::before {
     border: 10px solid transparent;
-    border-bottom: 10px solid #fff;
+    border-bottom: 10px solid #eff5ff;
     content: '';
     position: absolute;
     bottom: 100%;

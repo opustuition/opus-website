@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 permalink: /intensive/
-title: Intensive Day
+title: Intensive Programme
 layout: default
 custom_css:
 - intensive
@@ -13,38 +13,44 @@ custom_js:
 <section class="form-section">
     <h1>Sign Up for Intensive</h1>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Join OPUS Tuition for our intensive programme during any of our available dates. Our intensive sessions are held between 10AM and 4PM. Select any start and end time according to your convenience.
     </p>
     <form class="intensive-form" target="hidden-iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScC4CGyBqKivpztaxlSWrMu1VHXaJGQwMwEfFeTVM3LVcwMcQ/formResponse">
         <div class="form-card">
             <label>Name:</label>
             <input type="text" required="true" name="entry.719327231">
-            <label>Date:</label>
-            <select required="true" name="entry.1989451632">
-                <option value="6/11/24">6/11/24</option>
-                <option value="7/11/24">7/11/24</option>
-                <option value="14/11/24">14/11/24</option>
-                <option value="20/11/24">20/11/24</option>
-                <option value="21/11/24">21/11/24</option>
-            </select>
-            <label>Time (Start):</label>
-            <select required="true" name="entry.1490468971">
-                <option value="10AM">10AM</option>
-                <option value="11AM">11AM</option>
-                <option value="12PM">12PM</option>
-                <option value="1PM">1PM</option>
-                <option value="2PM">2PM</option>
-                <option value="3PM">3PM</option>
-            </select>
-            <label>Time (End):</label>
-            <select required="true" name="entry.1775478009">
-                <option value="11AM">11AM</option>
-                <option value="12PM">12PM</option>
-                <option value="1PM">1PM</option>
-                <option value="2PM">2PM</option>
-                <option value="3PM">3PM</option>
-                <option value="4PM">4PM</option>
-            </select>
+            <label for="entry.198945163">Date:</label>
+            <div class="select">
+                <select required="true" name="entry.1989451632">
+                    <option value="6/11/24">6/11/24</option>
+                    <option value="7/11/24">7/11/24</option>
+                    <option value="14/11/24">14/11/24</option>
+                    <option value="20/11/24">20/11/24</option>
+                    <option value="21/11/24">21/11/24</option>
+                </select>
+            </div>
+            <label for="entry.1490468971">Time (Start):</label>
+            <div class="select">
+                <select required="true" name="entry.1490468971">
+                    <option value="10AM">10AM</option>
+                    <option value="11AM">11AM</option>
+                    <option value="12PM">12PM</option>
+                    <option value="1PM">1PM</option>
+                    <option value="2PM">2PM</option>
+                    <option value="3PM">3PM</option>
+                </select>
+            </div>
+            <label for="entry.1775478009">Time (End):</label>
+            <div class="select">
+                <select required="true" name="entry.1775478009">
+                    <option value="11AM">11AM</option>
+                    <option value="12PM">12PM</option>
+                    <option value="1PM">1PM</option>
+                    <option value="2PM">2PM</option>
+                    <option value="3PM">3PM</option>
+                    <option value="4PM">4PM</option>
+                </select>
+            </div>
         </div>
         <button class="cta">Submit</button>
     </form>
