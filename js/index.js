@@ -6,7 +6,6 @@ const options = {
 
 const featuresCallback = (entries, observer) => {
     entries.forEach((entry) => {
-        console.log("for each intersecting: ", entry)
         if (entry.isIntersecting) {
             let elem = entry.target;
             if (entry.intersectionRatio >= 0.90) {
@@ -75,7 +74,6 @@ window.onload = () => {
     const guaranteeSection = document.getElementsByClassName("guarantee")[0];
     const features = document.getElementsByClassName("feature-img");
     for (let feature of features) {
-        console.log("feature img")
         featuresObserver.observe(feature);
     }
     fadeObserver.observe(guaranteeSection);
