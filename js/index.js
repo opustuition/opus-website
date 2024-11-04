@@ -1,79 +1,71 @@
 const options = {
     root: document.querySelector(".wrapper"),
     rootMargin: "0px",
-    threshold: 1.0,
+    threshold: 0.9,
 };
 
-const callback = (entries, observer) => {
+const featuresCallback = (entries, observer) => {
     entries.forEach((entry) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              let elem = entry.target;
-        
-              if (entry.intersectionRatio >= 0.50) {
+        console.log("for each intersecting: ", entry)
+        if (entry.isIntersecting) {
+            let elem = entry.target;
+            if (entry.intersectionRatio >= 0.90) {
                 elem.classList.add("intersecting");
-              }
             }
-        });
+        }
     });
 };
 
 const fadeCallback = (entries, observer) => {
     entries.forEach((entry) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              let elem = entry.target;
-        
-              if (entry.intersectionRatio >= 0.9) {
-                elem.classList.add("intersecting");
-              }
+        if (entry.isIntersecting) {
+            let elem = entry.target;
+    
+            if (entry.intersectionRatio >= 0.9) {
+            elem.classList.add("intersecting");
             }
-        });
+        }
     });
 };
 
 const enrollmentCountCallback = (entries, observer) => {
     entries.forEach((entry) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              let elem = entry.target;
-        
-              if (entry.intersectionRatio >= 0.50) {
-                let number = 300;
-                var interval = setInterval(function() {
-                    const target = 400;
-                    elem.textContent = number;
-                    if (number >= target) clearInterval(interval);
-                    number++;
-                }, 10);
-              }
+        if (entry.isIntersecting) {
+            let elem = entry.target;
+    
+            if (entry.intersectionRatio >= 0.50) {
+            let number = 300;
+            var interval = setInterval(function() {
+                const target = 400;
+                elem.textContent = number;
+                if (number >= target) clearInterval(interval);
+                number++;
+            }, 10);
             }
-        });
+        }
     });
 };
 
 const alCountCallback = (entries, observer) => {
     entries.forEach((entry) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              let elem = entry.target;
-        
-              if (entry.intersectionRatio >= 0.50) {
-                let number = 50.3;
-                var interval = setInterval(function() {
-                    const target = 93.3;
-                    elem.textContent = number;
-                    if (number >= target) clearInterval(interval);
-                    number++
-                }, 10);
-              }
+        if (entry.isIntersecting) {
+            let elem = entry.target;
+    
+            if (entry.intersectionRatio >= 0.50) {
+            let number = 50.3;
+            var interval = setInterval(function() {
+                const target = 93.3;
+                elem.textContent = number;
+                if (number >= target) clearInterval(interval);
+                number++
+            }, 10);
             }
-        });
+        }
     });
 };
 
 window.onload = () => {
-    const featuresObserver = new IntersectionObserver(callback, options);
+    const featuresObserver = new IntersectionObserver(featuresCallback, options);
     const fadeObserver = new IntersectionObserver(fadeCallback, options);
     const enrollmentCountObserver = new IntersectionObserver(enrollmentCountCallback, options);
     const alCountObserver = new IntersectionObserver(alCountCallback, options);
@@ -83,6 +75,7 @@ window.onload = () => {
     const guaranteeSection = document.getElementsByClassName("guarantee")[0];
     const features = document.getElementsByClassName("feature-img");
     for (let feature of features) {
+        console.log("feature img")
         featuresObserver.observe(feature);
     }
     fadeObserver.observe(guaranteeSection);
