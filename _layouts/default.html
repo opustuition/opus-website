@@ -7,10 +7,10 @@
             - {{ page.title }}
           {% endif %}
         </title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/favicon-16x16.png">
+        <link rel="manifest" href="{{ site.url }}/site.webmanifest">
         <meta name="description" content="OPUS Tuition is a forward-thinking organization dedicated to providing the best learning experience for students by merging the advantages of private tuition with the structured support typically offered at tuition centers. Our unique approach offers the comfort and flexibility of learning at home, while ensuring students benefit from the professional resources and progress tracking found in a tuition center. By integrating personalized learning with structured support, OPUS Tuition delivers significant improvements in academic performance, making it the ideal choice for parents seeking the best for their children."/>
         <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/main.css">
         <script src="{{ site.url }}/js/main.js"></script>
@@ -36,13 +36,13 @@
 
         {% if page.custom_css %}
             {% for stylesheet in page.custom_css %}
-                <link rel="stylesheet" href="/css/{{ stylesheet }}.css" media="screen" type="text/css">
+                <link rel="stylesheet" href="{{ site.url }}/css/{{ stylesheet }}.css" media="screen" type="text/css">
             {% endfor %}
         {% endif %}
 
         {% if page.custom_js %}
             {% for js_file in page.custom_js %}
-                <script src='/js/{{ js_file }}.js' type="text/javascript"></script>
+                <script src='{{ site.url }}/js/{{ js_file }}.js' type="text/javascript"></script>
             {% endfor %}
         {% endif %}
     </head>
