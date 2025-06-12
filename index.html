@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: default
+layout: landing
 custom_css:
 - index
 custom_js:
@@ -20,49 +20,77 @@ custom_js:
     <div class="arrow-l"></div>
     <div class="arrow-r"></div>
     <div class="testimonial-scroll">
+        {% include testimonial.html 
+            img="beans/bean-blue-bg-light-orange.svg"
+            source="Muhammad Iqbal Bin Ahmad"
+            text="The tutors at OPUS make every lesson fun, and for the first time, my child looks forward to studying. Her grades are proof of their impact"
+        %}
         {% include testimonial.html
-            img="bean-yellow-bg-orange.svg"
+            img="testimonials/zhee-hinn-photo.jpg"
+            source="Zhee Hinn, 10"
+            text="Good teacher and has helped me improve my math. The teaching style she uses is very effective,so now I am better at math and I am able to understand questions easily and able to
+solve most questions. Thank you so much"
+        %}
+        {% include testimonial.html
+            img="beans/bean-yellow-bg-orange.svg"
             source="Tan Wei Jie"
             text="My son used to dread school, but since starting at OPUS, he's actually excited to learn and has shown such amazing improvement!"
         %}
         {% include testimonial.html
-            img="bean-purple-bg-pink.svg"
+            img="testimonials/ming-jun-photo.jpg"
+            source="Ming Jun, 11"
+            text="Your dedication to help students succeed in math is evident in everything you do. Your patience
+with students is truly appreciated. Thank you so much!"
+        %}
+        {% include testimonial.html
+            img="beans/bean-purple-bg-pink.svg"
             source="Nurul Aisyah Binte Rahim"
             text="We tried everything, but only OPUS got my daughter to enjoy studying, and her grades have skyrocketed within just two months!"
         %}
         {% include testimonial.html
-            img="bean-green-bg-yellow.svg"
+            img="testimonials/wei-li-photo.jpg"
+            source="Wei Li, 12"
+            text="Good teacher and has helped n improve my math,the teaching style she uses very effective,so now i am was better at math and i am able to understanding question easily and able to solving most question."
+        %}
+        {% include testimonial.html
+            img="beans/bean-green-bg-yellow.svg"
             source="Priya Nandini Menon"
             text="OPUS is a game-changer—my child went from failing to scoring top marks, and now even I understand how to support his studies better."
         %}
         {% include testimonial.html
-            img="bean-orange-bg-blue.svg"
+            img="beans/bean-blue-bg-pink.svg"
+            source="Lee Guan Teck"
+            text="The personalized support at OPUS is incredible; my daughter now scores in the 90s, and I understand how to help her progress even further."
+        %}
+        {% include testimonial.html
+            img="testimonials/sakura-photo.jpg"
+            source="Sakura, 10"
+            text="Great teacher and has helped me to improve my maths. Her teaching is simple to understand and learn from. Making me understand maths faster and easier for me solve."
+        %}
+        {% include testimonial.html
+            img="beans/bean-orange-bg-blue.svg"
             source="Jason Pereira"
             text="I never thought my son would excel in math, but the tutors here make it so engaging, and his scores are unbelievable now!"
         %}
         {% include testimonial.html
-            img="bean-yellow-bg-purple.svg"
+            img="beans/bean-yellow-bg-purple.svg"
             source="Ong Mei Ling"
             text="Thanks to OPUS, my daughter not only understands her subjects but loves going to tuition. We saw a drastic change in just a month!"
         %}
-        {% include testimonial.html 
-            img="bean-blue-bg-light-orange.svg"
-            source="Muhammad Iqbal Bin Ahmad"
-            text="The tutors at OPUS make every lesson fun, and for the first time, my child looks forward to studying. Her grades are proof of their impact" %}
         {% include testimonial.html
-            img="bean-pink-bg-green.svg"
+            img="testimonials/chayse-photo.jpg"
+            source="Chayse, 8"
+            text="She is a really good teacher who helped me improve a lot in math. Her way of teaching is easy to follow and makes things clearer for me. I can now understand questions better and solve them more confidently. Thank you for your help!"
+        %}
+        {% include testimonial.html
+            img="beans/bean-pink-bg-green.svg"
             source="Sarah Rodrigues"
             text="In just three months, OPUS transformed my son's attitude towards school. He's confident, happy, and performing exceptionally well!"
         %}
         {% include testimonial.html
-            img="bean-orange-bg-yellow.svg"
+            img="beans/bean-orange-bg-yellow.svg"
             source="Lim Xiao Ling"
             text="I thought my child would never enjoy studying, but OPUS changed that. He's finally engaged and doing better than ever in all subjects."
-        %}
-        {% include testimonial.html
-            img="bean-blue-bg-pink.svg"
-            source="Lee Guan Teck"
-            text="The personalized support at OPUS is incredible; my daughter now scores in the 90s, and I understand how to help her progress even further."
         %}
     </div>
 </section>

@@ -42,6 +42,10 @@
     width: 250px;
 }
 
+.testimonial-photo img {
+    max-width: 100%;
+}
+
 .testimonial-text {
     background: #eff5ff;
     border-radius: 20px;
