@@ -211,13 +211,25 @@ body {
 }
 
 .footer-contact {
-  column-gap: 3rem;
+  column-gap: 1.25rem;
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   margin: 4rem auto;
   max-width: 600px;
   row-gap: 1rem;
+}
+
+.footer-contact-card {
+  background: rgba(255, 255, 255, .7);
+  border: 1px solid rgba(59, 110, 216, .12);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(24, 44, 82, .06);
+  padding: 1.25rem 1.4rem;
+}
+
+.footer-waitlist-card {
+  text-align: center;
 }
 
 .footer-phone,
@@ -227,6 +239,28 @@ body {
   display: grid;
   font-size: 1.2rem;
   grid-template-columns: auto 1fr;
+}
+
+.footer-email {
+  margin-top: .9rem;
+}
+
+.footer-card-label {
+  color: #1f3f8f;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  margin-bottom: .65rem;
+  text-transform: uppercase;
+}
+
+.footer-hours-text {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.footer-waitlist-card .cta {
+  margin-top: 1rem;
 }
 
 .footer-phone-icon,
@@ -251,9 +285,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: .9rem 1rem;
-  grid-column: 1 / -1;
   justify-content: center;
-  padding-top: .5rem;
+  padding-top: .25rem;
 }
 
 .footer-social a {
@@ -303,6 +336,10 @@ body {
 
 .footer-social-xiaohongshu {
   background-image: url("/img/icons/xiaohongshu-seeklogo.svg");
+}
+
+.footer-social-whatsapp {
+  background-image: url("/img/icons/whatsapp.svg");
 }
 
 .header {
@@ -443,7 +480,7 @@ body {
   border: none;
   border-radius: 30px;
   color: #000;
-  display: inline-block;
+  display: inline-flex;
   /* font-family: 'LoRes', sans-serif; */
   font-size: .8em;
   font-weight: bold;
@@ -452,6 +489,8 @@ body {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+  gap: 8px;
+  align-items: center;
 }
 
 a.cta:visited {
@@ -665,9 +704,18 @@ a.cta:hover {
   }
 
   .footer-contact {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-items: center;
     max-width: 1000px;
+  }
+
+  .footer-contact-card {
+    width: 100%;
+  }
+
+  .footer-waitlist-card,
+  .footer-social-card {
+    grid-column: 1 / -1;
   }
 
   .footer-social {
