@@ -16,9 +16,9 @@ custom_css:
     </p>
     <div class="form-card waitlist-card">
         <div class="waitlist-message">I want to join the waitlist</div>
-        <div class="waitlist-detail">WhatsApp: +65 8317 5711</div>
+        <div class="waitlist-detail">WhatsApp: {{ site.data.contact.phone_display }}</div>
         <a class="cta waitlist-whatsapp-link"
-            href="https://wa.me/6583175711?text=I%20want%20to%20join%20the%20waitlist">Open WhatsApp</a>
+            href="{{ site.data.contact.whatsapp_waitlist }}" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
         <p class="waitlist-note">You can edit the message before sending if you want to include the student’s name or
             level.</p>
     </div>

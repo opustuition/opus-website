@@ -2,11 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: landing
+layout: default
+content_class: index-content
 custom_css:
-- index
-custom_js:
-- index
+- home
 ---
 
 <section class="value-prop">
@@ -118,7 +117,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#C492CF;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-tailored.svg" />
+                    <img src="{{ '/assets/images/beans/bean-tailored.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Personalized Learning Plans</h2>
                 <p class="feature-text">
@@ -130,7 +129,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#0AA15D;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-scheduling.svg" />
+                    <img src="{{ '/assets/images/beans/bean-scheduling.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Flexible Scheduling</h2>
                 <p class="feature-text">
@@ -142,7 +141,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#D8BB2B;">
-                    <img src="{{ site.url }}/img/assets/track-progress.svg" />
+                    <img src="{{ '/assets/images/illustrations/track-progress.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Progress Tracking</h2>
                 <p class="feature-text">
@@ -154,7 +153,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#8A67C9;">
-                    <img src="{{ site.url }}/img/assets/star.svg" />
+                    <img src="{{ '/assets/images/illustrations/star.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Experienced Trained Tutors</h2>
                 <p class="feature-text">
@@ -166,7 +165,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#DB9627;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-diverse.svg" />
+                    <img src="{{ '/assets/images/beans/bean-diverse.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Comprehensive Learning Materials</h2>
                 <p class="feature-text">
@@ -178,7 +177,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#6178E1;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-home.svg" />
+                    <img src="{{ '/assets/images/beans/bean-home.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Seamless Home-Based Learning</h2>
                 <p class="feature-text">
@@ -192,11 +191,11 @@ custom_js:
 
 <section class="stats">
     <div class="stat stat-enrolled">
-        <div class="stat-big"><span id="enrollment-count">400</span>+</div>
+        <div class="stat-big"><span data-counter-start="300" data-counter-target="400">400</span>+</div>
         <div class="stat-small">students enrolled</div>
     </div>
     <div class="stat stat-al">
-        <div class="stat-big"><span id="al-count">93.3</span>%</div>
+        <div class="stat-big"><span data-counter-start="50.3" data-counter-target="93.3" data-counter-decimals="1">93.3</span>%</div>
         <div class="stat-small">AL1-AL3 achieved</div>
     </div>
     <div class="stat stat-bands">
@@ -211,6 +210,6 @@ custom_js:
         OPUS Tuition guarantees that, within a 12-month period, your student will achieve at least a 10% improvement in
         their academic results. If the student does not meet the specified improvement benchmark, we will process a full
         refund of the tuition fees paid for the year, ensuring that the investment in your student's education is
-        risk-free. <a href="{{ site.url }}/guarantee">See our full money-back policy for details.</a>
+        risk-free. <a href="{{ '/guarantee/' | relative_url }}">See our full money-back policy for details.</a>
     </p>
 </section>

@@ -1,6 +1,6 @@
 <div class="testimonial">
     <div class="testimonial-photo">
-        <img src="{{ site.url }}/img/assets/{{ include.img }}"/>
+        <img src="{{ '/assets/images/' | append: include.img | relative_url }}" alt="" loading="lazy" />
     </div>
     <div class="testimonial-text">
         &quot;{{ include.text }}&quot;

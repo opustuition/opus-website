@@ -1,19 +1,19 @@
 <nav>
   <ul>
     <li>
-      <a href="{{ site.url }}">Home</a>
+      <a href="{{ '/' | relative_url }}">Home</a>
     </li>
     <li>
-      <a href="{{ site.url }}/basic-tutor">Basic Tutor</a>
+      <a href="{{ '/basic-tutor/' | relative_url }}">Basic Tutor</a>
     </li>
     <li>
-      <a href="{{ site.url }}/duo-tutor">Duo Tutor</a>
+      <a href="{{ '/duo-tutor/' | relative_url }}">Duo Tutor</a>
     </li>
     <li>
-      <a href="https://wa.me/6583175711?text=I%20want%20to%20join%20the%20waitlist">Join Waitlist</a>
+      <a href="{{ site.data.contact.whatsapp_waitlist }}" target="_blank" rel="noopener noreferrer">Join Waitlist</a>
     </li>
     <li>
-      <a href="{{ site.url }}/guarantee">Our Money-Back Guarantee</a>
+      <a href="{{ '/guarantee/' | relative_url }}">Our Money-Back Guarantee</a>
     </li>
   </ul>
 </nav>

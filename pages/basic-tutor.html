@@ -3,9 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 permalink: /basic-tutor/
 title: Basic Tutor
-layout: landing
+layout: default
+content_class: index-content
 custom_css:
-- landing
+- programme
 ---
 
 <section class="value-prop">
@@ -101,13 +102,13 @@ custom_css:
 <section class="rates">
     <h2>Rates</h2>
     <p>
-        Please contact us via WhatsApp at <strong>+65 8317 5711</strong> to learn more
+        Please contact us via WhatsApp at <strong>{{ site.data.contact.phone_display }}</strong> to learn more
     </p>
 </section>
 
 <section class="application">
     <h2>Application</h2>
     <p>
-        Request a place on the waitlist by messaging us on WhatsApp at <strong>+65 8317 5711</strong>
+        Request a place on the waitlist by messaging us on WhatsApp at <strong>{{ site.data.contact.phone_display }}</strong>
     </p>
 </section>

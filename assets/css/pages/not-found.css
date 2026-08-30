@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 4rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 2rem 0;
+}

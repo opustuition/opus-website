@@ -1,5 +1,5 @@
 .bg-squiggle-orange {
-  background-image: url('/css/branding/squiggle-orange.svg');
+  background-image: url('../images/decorative/squiggle-orange.svg');
   background-repeat: no-repeat;
   background-size: contain;
   height: 10rem;
@@ -10,7 +10,7 @@
 }
 
 .bg-squiggle-green {
-  background-image: url('/css/branding/squiggle-green.svg');
+  background-image: url('../images/decorative/squiggle-green.svg');
   background-repeat: no-repeat;
   background-size: contain;
   height: 8rem;
@@ -21,7 +21,7 @@
 }
 
 .bg-squiggle-blue {
-  background-image: url('/css/branding/squiggle-blue.svg');
+  background-image: url('../images/decorative/squiggle-blue.svg');
   background-repeat: no-repeat;
   background-size: contain;
   height: 6rem;
@@ -149,6 +149,10 @@ body {
   padding: 0;
 }
 
+body.menu-expanded {
+  overflow: hidden;
+}
+
 .wrapper {
   margin: 0 auto;
   position: absolute;
@@ -273,11 +277,11 @@ body {
 }
 
 .footer-phone-icon {
-  background: url("/img/icons/phone-solid.svg");
+  background: url("../images/icons/phone-solid.svg");
 }
 
 .footer-email-icon {
-  background: url("/img/icons/envelope-solid.svg");
+  background: url("../images/icons/envelope-solid.svg");
 }
 
 .footer-social {
@@ -319,41 +323,39 @@ body {
 }
 
 .footer-social-facebook {
-  background-image: url("/img/icons/facebook.svg");
+  background-image: url("../images/icons/facebook.svg");
 }
 
 .footer-social-instagram {
-  background-image: url("/img/icons/instagram.svg");
+  background-image: url("../images/icons/instagram.svg");
 }
 
 .footer-social-linkedin {
-  background-image: url("/img/icons/linkedin.svg");
+  background-image: url("../images/icons/linkedin.svg");
 }
 
 .footer-social-tiktok {
-  background-image: url("/img/icons/tiktok.svg");
+  background-image: url("../images/icons/tiktok.svg");
 }
 
 .footer-social-xiaohongshu {
-  background-image: url("/img/icons/xiaohongshu-seeklogo.svg");
+  background-image: url("../images/icons/xiaohongshu-seeklogo.svg");
 }
 
 .footer-social-whatsapp {
-  background-image: url("/img/icons/whatsapp.svg");
+  background-image: url("../images/icons/whatsapp.svg");
 }
 
 .header {
-  padding: .4rem .6rem;
-  position: absolute;
-  top: -100%;
-  width: 100%;
-  z-index: 10;
   background: #3B6ED8;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
   overflow: hidden;
+  padding: .4rem .6rem;
   position: fixed;
   top: 0;
   transition: all .3s ease;
+  width: 100%;
+  z-index: 10;
 }
 
 .header-content {
@@ -371,19 +373,81 @@ body {
   font-size: 1.2rem;
   margin: .2rem;
   text-decoration: none;
-  ;
 }
 
 .header .logo:hover {
   opacity: .6;
 }
 
-.header .cta-box {
-  text-align: right;
+.header-spacer {
+  width: 1.6rem;
 }
 
-.header .cta {
-  padding: .5rem 1.5rem;
+.whatsapp-widget {
+  align-items: center;
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  display: inline-flex;
+  filter: drop-shadow(0 8px 20px rgba(24, 44, 82, .22));
+  gap: .65rem;
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  text-decoration: none;
+  z-index: 15;
+}
+
+.whatsapp-widget:visited {
+  color: #173b2a;
+}
+
+.whatsapp-widget__message {
+  background: rgba(255, 255, 255, .97);
+  border: 1px solid rgba(23, 59, 42, .12);
+  border-radius: 999px;
+  color: #173b2a;
+  font-size: .78rem;
+  font-weight: 650;
+  line-height: 1.25;
+  padding: .65rem .9rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+  white-space: nowrap;
+}
+
+.whatsapp-widget__icon {
+  background-color: #25d366;
+  background-image: url("../images/icons/whatsapp.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1.8rem;
+  border: 2px solid rgba(255, 255, 255, .95);
+  border-radius: 50%;
+  box-shadow: 0 5px 14px rgba(18, 84, 43, .28);
+  flex: 0 0 auto;
+  height: 3.25rem;
+  transition: transform .2s ease, background-color .2s ease;
+  width: 3.25rem;
+}
+
+.whatsapp-widget:hover,
+.whatsapp-widget:focus-visible {
+  color: #173b2a;
+}
+
+.whatsapp-widget:hover .whatsapp-widget__message,
+.whatsapp-widget:focus-visible .whatsapp-widget__message {
+  box-shadow: 0 6px 18px rgba(24, 44, 82, .12);
+  transform: translateX(-2px);
+}
+
+.whatsapp-widget:hover .whatsapp-widget__icon,
+.whatsapp-widget:focus-visible .whatsapp-widget__icon {
+  background-color: #1fbd59;
+  transform: translateY(-2px);
+}
+
+.whatsapp-widget:focus-visible {
+  border-radius: 999px;
+  outline: 3px solid #ffdd34;
+  outline-offset: 4px;
 }
 
 .menu-open {
@@ -433,6 +497,7 @@ body {
   background: #3B6ED8;
   height: 100vh;
   left: -100%;
+  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -441,12 +506,14 @@ body {
 }
 
 .sidebar-wrapper {
+  background: rgba(10, 29, 70, .35);
   display: none;
   height: 100vh;
   left: 0;
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 19;
 }
 
 .sidebar-wrapper.expand {
@@ -469,10 +536,6 @@ body {
 
 .sidebar.expand {
   left: 0;
-}
-
-.hidden-iframe {
-  display: none;
 }
 
 .cta {
@@ -502,43 +565,6 @@ a.cta:hover {
   background: #000;
   color: #fff;
   opacity: 1;
-}
-
-.clear {
-  margin: 0 0 5rem 0;
-}
-
-.menu-open {
-  background: none;
-  color: #2C3E50;
-  font-size: .8rem;
-  font-weight: bold;
-  width: 1.6rem;
-}
-
-.menu-open div {
-  background: #fff;
-  height: 2px;
-  margin: 0 0 6px 0;
-}
-
-.menu-open div:last-child {
-  margin: 0;
-}
-
-.menu-close {
-  background: none;
-  border: 1px solid #fff;
-  border-radius: .8rem;
-  color: #fff;
-  font-size: .8rem;
-  font-weight: bold;
-  margin: .5rem 1rem;
-  padding: .5rem 1rem;
-}
-
-.sidebar {
-  overflow: hidden;
 }
 
 .sidebar nav {
@@ -631,6 +657,34 @@ a.cta:hover {
 
 @media (max-width: 370px) {}
 
+@media (max-width: 480px) {
+  .whatsapp-widget {
+    bottom: max(.85rem, env(safe-area-inset-bottom));
+    gap: .45rem;
+    right: max(.65rem, env(safe-area-inset-right));
+  }
+
+  .whatsapp-widget__message {
+    font-size: .7rem;
+    max-width: 8.5rem;
+    padding: .55rem .7rem;
+    white-space: normal;
+  }
+
+  .whatsapp-widget__icon {
+    background-size: 1.55rem;
+    height: 2.85rem;
+    width: 2.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-widget__message,
+  .whatsapp-widget__icon {
+    transition: none;
+  }
+}
+
 @media (min-width: 600px) {
 
   h1 {
@@ -689,7 +743,7 @@ a.cta:hover {
   }
 
   .bg-squiggle-pink {
-    background-image: url('/css/branding/squiggle-pink.svg');
+    background-image: url('../images/decorative/squiggle-pink.svg');
     background-repeat: no-repeat;
     background-size: contain;
     height: 10rem;

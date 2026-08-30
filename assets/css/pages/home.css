@@ -1,8 +1,12 @@
 .value-prop {
     margin: 8rem auto 4rem auto;
     padding: 0 .6rem;
-    opacity: .2;
+    opacity: 1;
     transition: opacity 1s ease;
+}
+
+.js .value-prop {
+    opacity: .2;
 }
 
 .value-prop.intersecting {
@@ -113,8 +117,12 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
-    top: 80%;
+    top: 0;
     transition: top .8s ease;
+}
+
+.js .feature-img > img {
+    top: 80%;
 }
 
 .feature-img.intersecting  > img {
@@ -158,8 +166,12 @@
 
 .guarantee {
     margin: 12rem 0 2rem 0;
-    opacity: .2;
+    opacity: 1;
     transition: opacity 1.2s ease;
+}
+
+.js .guarantee {
+    opacity: .2;
 }
 
 .guarantee.intersecting {
