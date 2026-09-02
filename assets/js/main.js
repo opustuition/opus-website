@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scroller.scrollLeft = (scroller.scrollWidth - scroller.clientWidth) / 2;
   });
 
-  const revealElements = document.querySelectorAll(".value-prop, .guarantee, .feature-img");
+  const revealElements = document.querySelectorAll(".value-prop, .guarantee, .feature-img, .tutor-content section");
   const counters = document.querySelectorAll("[data-counter-target]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
