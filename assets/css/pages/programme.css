@@ -1,77 +1,10 @@
-section:first-child {
-    margin: 8rem auto 4rem auto;
+.index-content > .value-prop {
+    margin: clamp(4.5rem, 9vw, 7rem) auto clamp(3rem, 6vw, 4.5rem);
     padding: 0 .6rem;
 }
 
-section {
+.index-content > section {
     padding: 0 .6rem 2rem .6rem;
-}
-
-.testimonials {
-    margin: 0 0 2rem 0;
-    overflow-x: scroll;
-    overflow-y: visible;
-    padding: 0;
-    position: relative;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.testimonial-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-.testimonial-scroll {
-    align-items: start;
-    display: flex;
-    height: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.testimonial {
-    display: inline-block;
-    margin: 0 1rem;
-    position: relative;
-}
-
-.testimonial-photo {
-    border-radius: 50%;
-    height: 250px;
-    overflow: hidden;
-    width: 250px;
-}
-
-.testimonial-photo img {
-    max-width: 100%;
-}
-
-.testimonial-text {
-    background: #eff5ff;
-    border-radius: 20px;
-    color: #000;
-    max-width: 250px;
-    padding: 1rem;
-    position: relative;
-    top: -30px;
-    white-space: normal;
-}
-
-.testimonial-text::before {
-    border: 10px solid transparent;
-    border-bottom: 10px solid #eff5ff;
-    content: '';
-    position: absolute;
-    bottom: 100%;
-}
-
-.testimonial-source {
-    font-size: .9rem;
-    max-width: 250px;
-    padding: 1rem 0 0 0;
-    position: relative;
-    top: -30px;
-    white-space: normal;
 }
 
 .waitlist {
@@ -80,11 +13,55 @@ section {
     text-align: center;
 }
 
-section h1,
-section h2 {
+.index-content > section > h1,
+.index-content > section > h2 {
   font-family: "LoRes", sans-serif;
   font-size: 2.6rem;
   text-align: center;
+}
+
+.index-content > .guarantee {
+  background: #eff5ff;
+  border-radius: 1.55rem;
+  box-shadow: 0 18px 38px rgba(14, 38, 91, .14);
+  color: #10224d;
+  margin: clamp(4.5rem, 9vw, 7rem) auto 2rem;
+  max-width: 980px;
+  padding: clamp(2rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.index-content > .guarantee h2 {
+  margin-top: 0;
+}
+
+.index-content > .guarantee a,
+.index-content > .guarantee a:visited {
+  color: #3b6ed8;
+}
+
+.index-content > .guarantee a:hover {
+  color: #10224d;
+}
+
+/* Page reveal motion */
+.js .programme-content > section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.js .programme-content > section.intersecting {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .programme-content > section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Parent and tutor pathways */
@@ -160,12 +137,4 @@ section h2 {
   .audience-pathways-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-@media (min-width: 900px) {
-
-    section:first-child {
-        margin: 6rem auto 2rem auto;
-        padding: 1rem 0 2rem 0;
-    }
 }

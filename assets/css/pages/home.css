@@ -1,5 +1,5 @@
 .value-prop {
-    margin: 8rem auto 4rem auto;
+    margin: clamp(4.5rem, 9vw, 7rem) auto clamp(3rem, 6vw, 4.5rem);
     padding: 0 .6rem;
     opacity: 1;
     transition: opacity 1s ease;
@@ -13,73 +13,8 @@
     opacity: 1;
 }
 
-.testimonials {
-    overflow-x: scroll;
-    overflow-y: visible;
-    position: relative;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.testimonial-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-.testimonial-scroll {
-    align-items: start;
-    display: flex;
-    height: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.testimonial {
-    display: inline-block;
-    margin: 0 1rem;
-    position: relative;
-}
-
-.testimonial-photo {
-    border-radius: 50%;
-    height: 250px;
-    overflow: hidden;
-    width: 250px;
-}
-
-.testimonial-photo img {
-    max-width: 100%;
-}
-
-.testimonial-text {
-    background: #eff5ff;
-    border-radius: 20px;
-    color: #000;
-    max-width: 250px;
-    padding: 1rem;
-    position: relative;
-    top: -30px;
-    white-space: normal;
-}
-
-.testimonial-text::before {
-    border: 10px solid transparent;
-    border-bottom: 10px solid #eff5ff;
-    content: '';
-    position: absolute;
-    bottom: 100%;
-}
-
-.testimonial-source {
-    font-size: .9rem;
-    max-width: 250px;
-    padding: 1rem 0 0 0;
-    position: relative;
-    top: -30px;
-    white-space: normal;
-}
-
 .features {
-    margin: 8rem auto;
+    margin: clamp(4.5rem, 9vw, 7rem) auto;
     max-width: 1000px;
 }
 
@@ -101,9 +36,15 @@
 
 .feature {
     background: #eff5ff;
-    border-radius: 10px;
+    border-radius: 1.35rem;
     color: #000;
     overflow: hidden;
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.feature:hover {
+    box-shadow: 0 18px 38px rgba(14, 38, 91, .16);
+    transform: translateY(-4px);
 }
 
 .feature-img {
@@ -145,7 +86,7 @@
     grid-template-columns: 1fr;
     margin: 0 auto;
     max-width: 1000px;
-    row-gap: 8rem;
+    row-gap: clamp(3.5rem, 7vw, 5.5rem);
 }
 
 .stat {
@@ -165,7 +106,14 @@
 }
 
 .guarantee {
-    margin: 12rem 0 2rem 0;
+    background: #eff5ff;
+    border-radius: 1.55rem;
+    box-shadow: 0 18px 38px rgba(14, 38, 91, .14);
+    color: #10224d;
+    margin: clamp(4.5rem, 9vw, 7rem) auto 2rem;
+    max-width: 980px;
+    padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3rem);
+    text-align: center;
     opacity: 1;
     transition: opacity 1.2s ease;
 }
@@ -181,6 +129,16 @@
 .guarantee h2 {
     font-family: "LoRes", sans-serif;
     font-size: 2rem;
+    margin-top: 0;
+}
+
+.guarantee a,
+.guarantee a:visited {
+    color: #3b6ed8;
+}
+
+.guarantee a:hover {
+    color: #10224d;
 }
 
 .waitlist {
@@ -221,28 +179,6 @@
 }
 
 @media (min-width: 900px) {
-
-    .value-prop {
-        margin: 6rem auto 2rem auto;
-        padding: 1rem 0 2rem 0;
-    }
-
-    .features {
-        margin: 12rem auto;
-    }
-
-    .guarantee {
-        margin: 12rem 0 4rem 0;
-    }
-
-    .testimonial {
-        font-size: .9rem;
-    }
-
-    .testimonial-source {
-        font-size: .8rem;
-    }
-
     .feature {
         font-size: .9rem;
     }
@@ -254,7 +190,7 @@
         grid-template-columns: 1fr 1fr;
         margin: 0 auto;
         max-width: 1000px;
-        row-gap: 6rem;
+        row-gap: clamp(3.5rem, 7vw, 5.5rem);
     }
 
     .stat-enrolled {

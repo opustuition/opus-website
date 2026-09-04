@@ -89,7 +89,7 @@
 }
 
 .tutor-hero h1 {
-  font-size: clamp(2.75rem, 8.6vw, 5.8rem);
+  font-size: clamp(2rem, 5vw, 2.6rem);
   line-height: .96;
   margin: .8rem 0 1.35rem;
 }
@@ -434,8 +434,8 @@
   padding: 0;
 }
 
-/* Tutor testimonials */
-.tutor-testimonials .testimonials {
+/* Tutor testimonial layout */
+.tutor-testimonials .testimonial-carousel {
   overflow-x: scroll;
   overflow-y: visible;
   margin-left: calc(50% - 50vw);
@@ -444,64 +444,6 @@
   position: relative;
   scrollbar-width: none;
   width: 100vw;
-}
-
-.tutor-testimonials .testimonial-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.tutor-testimonials .testimonial-scroll {
-  align-items: start;
-  display: flex;
-  height: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.tutor-testimonials .testimonial {
-  display: inline-block;
-  flex: 0 0 auto;
-  margin: 0 1rem;
-  position: relative;
-}
-
-.tutor-testimonials .testimonial-photo {
-  border-radius: 50%;
-  height: 250px;
-  overflow: hidden;
-  width: 250px;
-}
-
-.tutor-testimonials .testimonial-photo img {
-  max-width: 100%;
-}
-
-.tutor-testimonials .testimonial-text {
-  background: var(--tutor-paper);
-  border-radius: 20px;
-  color: #000;
-  max-width: 250px;
-  padding: 1rem;
-  position: relative;
-  top: -30px;
-  white-space: normal;
-}
-
-.tutor-testimonials .testimonial-text::before {
-  border: 10px solid transparent;
-  border-bottom: 10px solid var(--tutor-paper);
-  bottom: 100%;
-  content: '';
-  position: absolute;
-}
-
-.tutor-testimonials .testimonial-source {
-  font-size: .78rem;
-  max-width: 250px;
-  padding: 1rem 0 0;
-  position: relative;
-  top: -30px;
-  white-space: normal;
 }
 
 /* Eligibility */

@@ -38,7 +38,7 @@
 }
 
 .blog-hero h1 {
-  font-size: clamp(2.5rem, 6.5vw, 4.7rem);
+  font-size: clamp(2rem, 5vw, 2.6rem);
   margin: 0 auto 1.15rem;
 }
 
@@ -94,6 +94,18 @@
   background: #10224d;
 }
 
+/* Page reveal motion */
+.js .blog-content section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.js .blog-content section.intersecting {
+  opacity: 1;
+  transform: none;
+}
+
 @media (min-width: 760px) {
   .instagram-feed {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -101,5 +113,13 @@
 
   .instagram-feed .instagram-media:last-child:nth-child(odd) {
     grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .blog-content section {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

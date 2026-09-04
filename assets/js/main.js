@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(autoScroll);
   });
 
-  const revealElements = document.querySelectorAll(".value-prop, .guarantee, .feature-img, .tutor-content section");
+  const revealElements = document.querySelectorAll(".value-prop, .guarantee, .feature-img, .tutor-content section, .programme-content > section, .blog-content section");
   const counters = document.querySelectorAll("[data-counter-target]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
