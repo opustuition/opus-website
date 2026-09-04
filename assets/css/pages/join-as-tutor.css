@@ -13,7 +13,7 @@
 .tutor-content {
   margin: 3rem auto 5rem;
   max-width: 1180px;
-  overflow: hidden;
+  overflow: visible;
   padding: 2rem 1rem 4rem;
 }
 
@@ -432,6 +432,92 @@
 .tutor-card-grid p {
   font-size: .86rem;
   padding: 0;
+}
+
+/* Tutor testimonials */
+.tutor-testimonials {
+  text-align: center;
+}
+
+.tutor-testimonials-heading {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.tutor-testimonials-heading>p:last-child {
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 590px;
+}
+
+.tutor-testimonials .testimonials {
+  overflow-x: scroll;
+  overflow-y: visible;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 2rem;
+  position: relative;
+  scrollbar-width: none;
+  width: 100vw;
+}
+
+.tutor-testimonials .testimonial-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.tutor-testimonials .testimonial-scroll {
+  align-items: start;
+  display: flex;
+  height: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tutor-testimonials .testimonial {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.tutor-testimonials .testimonial-photo {
+  border-radius: 50%;
+  height: 250px;
+  overflow: hidden;
+  width: 250px;
+}
+
+.tutor-testimonials .testimonial-photo img {
+  max-width: 100%;
+}
+
+.tutor-testimonials .testimonial-text {
+  background: var(--tutor-paper);
+  border-radius: 20px;
+  color: #000;
+  max-width: 250px;
+  padding: 1rem;
+  position: relative;
+  top: -30px;
+  white-space: normal;
+}
+
+.tutor-testimonials .testimonial-text::before {
+  border: 10px solid transparent;
+  border-bottom: 10px solid var(--tutor-paper);
+  bottom: 100%;
+  content: '';
+  position: absolute;
+}
+
+.tutor-testimonials .testimonial-source {
+  font-size: .78rem;
+  max-width: 250px;
+  padding: 1rem 0 0;
+  position: relative;
+  top: -30px;
+  white-space: normal;
 }
 
 /* Eligibility */

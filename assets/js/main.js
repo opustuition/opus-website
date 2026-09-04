@@ -31,7 +31,64 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll(".testimonial-scroll").forEach((scroller) => {
-    scroller.scrollLeft = (scroller.scrollWidth - scroller.clientWidth) / 2;
+    const originalTestimonials = Array.from(scroller.children);
+    if (!originalTestimonials.length) return;
+
+    const addTestimonialSet = () => {
+      originalTestimonials.forEach((testimonial) => {
+        const duplicate = testimonial.cloneNode(true);
+        duplicate.setAttribute("aria-hidden", "true");
+        scroller.append(duplicate);
+      });
+    };
+
+    addTestimonialSet();
+    const loopAt = scroller.scrollWidth / 2;
+
+    while (scroller.scrollWidth < scroller.clientWidth + loopAt) {
+      addTestimonialSet();
+    }
+
+    let isPaused = false;
+    let lastFrame;
+
+    scroller.scrollLeft = 0;
+
+    const pause = () => {
+      isPaused = true;
+    };
+
+    const resume = () => {
+      isPaused = false;
+      lastFrame = undefined;
+    };
+
+    ["pointerdown", "focusin", "touchstart"].forEach((eventName) => {
+      scroller.addEventListener(eventName, pause, { passive: true });
+    });
+    ["pointerup", "focusout", "touchend", "touchcancel"].forEach((eventName) => {
+      scroller.addEventListener(eventName, resume, { passive: true });
+    });
+
+    const autoScroll = (timestamp) => {
+      if (!isPaused && !reduceMotion && loopAt > 0) {
+        if (lastFrame) {
+          const distance = (timestamp - lastFrame) * .04;
+          const nextPosition = scroller.scrollLeft + distance;
+
+          if (nextPosition >= loopAt) {
+            scroller.scrollLeft = nextPosition - loopAt;
+          } else {
+            scroller.scrollLeft = nextPosition;
+          }
+        }
+        lastFrame = timestamp;
+      }
+
+      requestAnimationFrame(autoScroll);
+    };
+
+    requestAnimationFrame(autoScroll);
   });
 
   const revealElements = document.querySelectorAll(".value-prop, .guarantee, .feature-img, .tutor-content section");

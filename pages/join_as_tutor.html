@@ -148,6 +148,25 @@ custom_css:
     </div>
 </section>
 
+<section class="tutor-testimonials" aria-labelledby="tutor-testimonials-heading">
+    <div class="tutor-testimonials-heading">
+        <p class="tutor-eyebrow">Hear from our tutors</p>
+        <h2 id="tutor-testimonials-heading">More than a tutoring role.</h2>
+        <p>Discover what OPUS tutors enjoy about mentoring students — and how the experience has helped them grow too.
+        </p>
+    </div>
+    <div class="testimonials">
+        <div class="testimonial-scroll">
+            {% for testimonial in site.data.tutor_testimonials limit: 5 %}
+            {% assign tutor_image = testimonial.image | default: 'beans/bean-blue-bg-light-orange.svg' %}
+            {% capture tutor_source %}{{ testimonial.name }}{% if testimonial.role %}, {{ testimonial.role }}{% endif
+            %}{% endcapture %}
+            {% include testimonial.html img=tutor_image source=tutor_source text=testimonial.quote %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <section class="tutor-eligibility">
     <p class="tutor-eyebrow">Who can apply?</p>
     <h2>University students ready to make a difference.</h2>
