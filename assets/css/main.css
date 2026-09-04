@@ -567,6 +567,37 @@ a.cta:hover {
   opacity: 1;
 }
 
+/* Testimonial section headings */
+.testimonial-section-heading {
+  margin: 0 auto 2rem;
+  max-width: 680px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.testimonial-section-label {
+  color: #ffdd34;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  margin: 0 0 .7rem;
+  text-transform: uppercase;
+}
+
+.testimonial-section-heading h2 {
+  font-family: "LoRes", sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 .85rem;
+}
+
+.testimonial-section-heading>p:last-child {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 560px;
+}
+
 .sidebar nav {
   margin: 3rem 0 0 0;
 }

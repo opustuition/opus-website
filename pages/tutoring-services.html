@@ -19,10 +19,43 @@ custom_css:
     </p>
 </section>
 
-<section class="testimonials">
+<section class="audience-pathways" aria-labelledby="audience-pathways-heading">
+    <div class="audience-pathways-intro">
+        <p class="audience-pathways-label">How can we help?</p>
+        <h2 id="audience-pathways-heading">Choose the path that is right for you.</h2>
+    </div>
+    <div class="audience-pathways-grid">
+        <article class="audience-pathway audience-pathway-parent">
+            <p class="audience-pathway-kicker">For parents</p>
+            <h3>Interested in enrolling your child for tuition?</h3>
+            <p>Explore our personalised home tutoring services and request a place on the waitlist.</p>
+            <a class="cta" href="{{ site.data.contact.whatsapp_waitlist }}" target="_blank"
+                rel="noopener noreferrer">Enrol Your Child <span aria-hidden="true">&rarr;</span></a>
+        </article>
+        <article class="audience-pathway audience-pathway-tutor">
+            <p class="audience-pathway-kicker">For university students</p>
+            <h3>Interested in becoming a tutor?</h3>
+            <p>Join the OPUS tutor community and make a meaningful difference in students' lives.</p>
+            <a class="cta" href="{{ '/join-as-a-tutor/' | relative_url }}">Apply as a Tutor <span
+                    aria-hidden="true">&rarr;</span></a>
+        </article>
+    </div>
+</section>
+
+<section class="testimonial-section" aria-labelledby="parent-testimonials-heading">
+    <div class="testimonial-section-heading">
+        <p class="testimonial-section-label">Hear from our parents</p>
+        <h2 id="parent-testimonials-heading">Progress you can see.</h2>
+        <p>Hear how personalised support has helped OPUS students grow in confidence, understanding and results.</p>
+    </div>
+    <div class="testimonials">
     <div class="arrow-l"></div>
     <div class="arrow-r"></div>
     <div class="testimonial-scroll">
+        {% for testimonial in site.data.tutoring_service_testimonials %}
+        {% include testimonial.html img=testimonial.image source=testimonial.source text=testimonial.text %}
+        {% endfor %}
+        {% comment %}
         {% include testimonial.html
         img="beans/bean-blue-bg-light-orange.svg"
         source="Mrs Tan – Parent of Ethan, Primary 1"
@@ -96,6 +129,8 @@ custom_css:
         expectations: Mei Lin’s grade improved two bands, and her self-esteem blossomed alongside it. Truly
         exceptional."
         %}
+        {% endcomment %}
+    </div>
     </div>
 </section>
 

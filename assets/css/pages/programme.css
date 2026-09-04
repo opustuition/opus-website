@@ -82,9 +82,84 @@ section {
 
 section h1,
 section h2 {
-    font-family: "LoRes", sans-serif;
-    font-size: 2.6rem;
-    text-align: center;
+  font-family: "LoRes", sans-serif;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+/* Parent and tutor pathways */
+.audience-pathways {
+  margin: 3rem auto 5rem;
+  max-width: 980px;
+  padding: 0 .6rem 2rem;
+}
+
+.audience-pathways-intro {
+  margin: 0 auto 1.8rem;
+  max-width: 650px;
+  text-align: center;
+}
+
+.audience-pathways-label,
+.audience-pathway-kicker {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin: 0 0 .65rem;
+  text-transform: uppercase;
+}
+
+.audience-pathways-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.audience-pathway {
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 18rem;
+  padding: 2rem;
+}
+
+.audience-pathway h3 {
+  font-family: "LoRes", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+
+.audience-pathway>p:not(.audience-pathway-kicker) {
+  flex: 1;
+  margin: 0 0 1.5rem;
+}
+
+.audience-pathway-parent {
+  background: #eff5ff;
+  color: #10224d;
+}
+
+.audience-pathway-parent .audience-pathway-kicker {
+  color: #3b6ed8;
+}
+
+.audience-pathway-tutor {
+  background: #132a5e;
+  color: #fff;
+}
+
+.audience-pathway-tutor .audience-pathway-kicker {
+  color: #ffdd34;
+}
+
+.audience-pathway-tutor .cta {
+  background: #ffdd34;
+}
+
+@media (min-width: 700px) {
+  .audience-pathways-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 900px) {
