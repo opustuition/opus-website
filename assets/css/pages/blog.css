@@ -1,0 +1,105 @@
+:root {
+  --blog-yellow: #ffdd34;
+}
+
+.blog-content {
+  margin: 3rem auto 5rem;
+  max-width: 1180px;
+  padding: 2rem 1rem 4rem;
+}
+
+.blog-hero,
+.blog-feed {
+  margin: 0 auto clamp(4.5rem, 9vw, 7rem);
+  max-width: 980px;
+}
+
+.blog-hero {
+  max-width: 800px;
+  padding: clamp(3rem, 8vw, 6rem) 1rem clamp(2rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.blog-hero .blog-eyebrow,
+.blog-eyebrow {
+  color: var(--blog-yellow);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.blog-hero h1,
+.blog-feed h2 {
+  font-family: "LoRes", sans-serif;
+  letter-spacing: -.02em;
+  line-height: 1.08;
+}
+
+.blog-hero h1 {
+  font-size: clamp(2.5rem, 6.5vw, 4.7rem);
+  margin: 0 auto 1.15rem;
+}
+
+.blog-hero>p:last-child,
+.blog-feed-heading>p:last-child {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.blog-feed {
+  background: #eff5ff;
+  border-radius: 1.5rem;
+  color: #10224d;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.blog-feed .blog-eyebrow {
+  color: #3b6ed8;
+}
+
+.blog-feed h2 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin: 0 0 .8rem;
+}
+
+.instagram-feed {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+  margin: 2.25rem auto;
+}
+
+.instagram-feed .instagram-media {
+  margin: 0 !important;
+  max-width: 540px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.blog-follow {
+  background: #3b6ed8;
+  color: #fff;
+}
+
+.blog-follow:visited {
+  color: #fff;
+}
+
+.blog-follow:hover {
+  background: #10224d;
+}
+
+@media (min-width: 760px) {
+  .instagram-feed {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .instagram-feed .instagram-media:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
