@@ -799,6 +799,7 @@ a.cta:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .whatsapp-widget__message,
   .whatsapp-widget__icon {
     transition: none;

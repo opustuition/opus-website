@@ -133,6 +133,36 @@
   background: #ffdd34;
 }
 
+.audience-pathways-blog-link {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.audience-pathways-blog-link a {
+  align-items: center;
+  border: 1px solid #132a5e;
+  border-radius: 999px;
+  color: #132a5e;
+  display: inline-flex;
+  font-size: .75rem;
+  font-weight: 700;
+  gap: .4rem;
+  letter-spacing: .06em;
+  padding: .65rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.audience-pathways-blog-link a:visited {
+  color: #132a5e;
+}
+
+.audience-pathways-blog-link a:hover {
+  background: #132a5e;
+  color: #fff;
+  opacity: 1;
+}
+
 @media (min-width: 700px) {
   .audience-pathways-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
