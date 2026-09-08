@@ -2,11 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: landing
+layout: default
+content_class: index-content
 custom_css:
-- index
-custom_js:
-- index
+- home
 ---
 
 <section class="value-prop">
@@ -20,96 +19,18 @@ custom_js:
     </p>
 </section>
 
-<section class="testimonials">
-    <div class="arrow-l"></div>
-    <div class="arrow-r"></div>
-    <div class="testimonial-scroll">
-        {% include testimonial.html
-        img="beans/bean-blue-bg-light-orange.svg"
-        source="Muhammad Iqbal Bin Ahmad"
-        text="The tutors at OPUS make every lesson fun, and for the first time, my child looks forward to studying. Her
-        grades are proof of their impact"
-        %}
-        {% include testimonial.html
-        img="testimonials/zhee-hinn-photo.jpg"
-        source="Zhee Hinn, 10"
-        text="Good teacher and has helped me improve my math. The teaching style she uses is very effective,so now I am
-        better at math and I am able to understand questions easily and able to
-        solve most questions. Thank you so much"
-        %}
-        {% include testimonial.html
-        img="beans/bean-yellow-bg-orange.svg"
-        source="Tan Wei Jie"
-        text="My son used to dread school, but since starting at OPUS, he's actually excited to learn and has shown such
-        amazing improvement!"
-        %}
-        {% include testimonial.html
-        img="testimonials/ming-jun-photo.jpg"
-        source="Ming Jun, 11"
-        text="Your dedication to help students succeed in math is evident in everything you do. Your patience
-        with students is truly appreciated. Thank you so much!"
-        %}
-        {% include testimonial.html
-        img="beans/bean-purple-bg-pink.svg"
-        source="Nurul Aisyah Binte Rahim"
-        text="We tried everything, but only OPUS got my daughter to enjoy studying, and her grades have skyrocketed
-        within just two months!"
-        %}
-        {% include testimonial.html
-        img="testimonials/wei-li-photo.jpg"
-        source="Wei Li, 12"
-        text="Good teacher and has helped n improve my math,the teaching style she uses very effective,so now i am was
-        better at math and i am able to understanding question easily and able to solving most question."
-        %}
-        {% include testimonial.html
-        img="beans/bean-green-bg-yellow.svg"
-        source="Priya Nandini Menon"
-        text="OPUS is a game-changer—my child went from failing to scoring top marks, and now even I understand how to
-        support his studies better."
-        %}
-        {% include testimonial.html
-        img="beans/bean-blue-bg-pink.svg"
-        source="Lee Guan Teck"
-        text="The personalized support at OPUS is incredible; my daughter now scores in the 90s, and I understand how to
-        help her progress even further."
-        %}
-        {% include testimonial.html
-        img="testimonials/sakura-photo.jpg"
-        source="Sakura, 10"
-        text="Great teacher and has helped me to improve my maths. Her teaching is simple to understand and learn from.
-        Making me understand maths faster and easier for me solve."
-        %}
-        {% include testimonial.html
-        img="beans/bean-orange-bg-blue.svg"
-        source="Jason Pereira"
-        text="I never thought my son would excel in math, but the tutors here make it so engaging, and his scores are
-        unbelievable now!"
-        %}
-        {% include testimonial.html
-        img="beans/bean-yellow-bg-purple.svg"
-        source="Ong Mei Ling"
-        text="Thanks to OPUS, my daughter not only understands her subjects but loves going to tuition. We saw a drastic
-        change in just a month!"
-        %}
-        {% include testimonial.html
-        img="testimonials/chayse-photo.jpg"
-        source="Chayse, 8"
-        text="She is a really good teacher who helped me improve a lot in math. Her way of teaching is easy to follow
-        and makes things clearer for me. I can now understand questions better and solve them more confidently. Thank
-        you for your help!"
-        %}
-        {% include testimonial.html
-        img="beans/bean-pink-bg-green.svg"
-        source="Sarah Rodrigues"
-        text="In just three months, OPUS transformed my son's attitude towards school. He's confident, happy, and
-        performing exceptionally well!"
-        %}
-        {% include testimonial.html
-        img="beans/bean-orange-bg-yellow.svg"
-        source="Lim Xiao Ling"
-        text="I thought my child would never enjoy studying, but OPUS changed that. He's finally engaged and doing
-        better than ever in all subjects."
-        %}
+<section class="testimonial-section" aria-labelledby="student-testimonials-heading">
+    <div class="testimonial-section-heading">
+        <p class="testimonial-section-label">Hear from our students</p>
+        <h2 id="student-testimonials-heading">Learning that feels different.</h2>
+        <p>Discover what OPUS students enjoy about learning with us and how the experience has helped them grow too.</p>
+    </div>
+    <div class="testimonial-carousel testimonials">
+        <div class="testimonial-scroll">
+            {% for testimonial in site.data.home_testimonials %}
+            {% include testimonial.html img=testimonial.image source=testimonial.source text=testimonial.text %}
+            {% endfor %}
+        </div>
     </div>
 </section>
 
@@ -118,7 +39,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#C492CF;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-tailored.svg" />
+                    <img src="{{ '/assets/images/beans/bean-tailored.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Personalized Learning Plans</h2>
                 <p class="feature-text">
@@ -130,7 +51,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#0AA15D;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-scheduling.svg" />
+                    <img src="{{ '/assets/images/beans/bean-scheduling.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Flexible Scheduling</h2>
                 <p class="feature-text">
@@ -142,7 +63,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#D8BB2B;">
-                    <img src="{{ site.url }}/img/assets/track-progress.svg" />
+                    <img src="{{ '/assets/images/illustrations/track-progress.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Progress Tracking</h2>
                 <p class="feature-text">
@@ -154,7 +75,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#8A67C9;">
-                    <img src="{{ site.url }}/img/assets/star.svg" />
+                    <img src="{{ '/assets/images/illustrations/star.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Experienced Trained Tutors</h2>
                 <p class="feature-text">
@@ -166,7 +87,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#DB9627;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-diverse.svg" />
+                    <img src="{{ '/assets/images/beans/bean-diverse.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Comprehensive Learning Materials</h2>
                 <p class="feature-text">
@@ -178,7 +99,7 @@ custom_js:
         <li>
             <div class="feature">
                 <div class="feature-img" style="background:#6178E1;">
-                    <img src="{{ site.url }}/img/assets/beans/bean-home.svg" />
+                    <img src="{{ '/assets/images/beans/bean-home.svg' | relative_url }}" alt="" />
                 </div>
                 <h2>Seamless Home-Based Learning</h2>
                 <p class="feature-text">
@@ -192,25 +113,18 @@ custom_js:
 
 <section class="stats">
     <div class="stat stat-enrolled">
-        <div class="stat-big"><span id="enrollment-count">400</span>+</div>
+        <div class="stat-big"><span data-counter-start="300" data-counter-target="400">400</span>+</div>
         <div class="stat-small">students enrolled</div>
     </div>
     <div class="stat stat-al">
-        <div class="stat-big"><span id="al-count">93.3</span>%</div>
+        <div class="stat-big"><span data-counter-start="50.3" data-counter-target="93.3"
+                data-counter-decimals="1">93.3</span>%</div>
         <div class="stat-small">AL1-AL3 achieved</div>
     </div>
     <div class="stat stat-bands">
         <div class="stat-big">G1, G2, G3</div>
         <div class="stat-small">we cater to all bands</div>
     </div>
-</section>
+    <div> </div>
 
-<section class="guarantee">
-    <h2>Money-Back Guarantee</h2>
-    <p>
-        OPUS Tuition guarantees that, within a 12-month period, your student will achieve at least a 10% improvement in
-        their academic results. If the student does not meet the specified improvement benchmark, we will process a full
-        refund of the tuition fees paid for the year, ensuring that the investment in your student's education is
-        risk-free. <a href="{{ site.url }}/guarantee">See our full money-back policy for details.</a>
-    </p>
 </section>

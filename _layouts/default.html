@@ -5,11 +5,12 @@
         {% include bg-squiggles.html %}
         {% include header.html %}
         <div class="wrapper">
-            <div class="content">
+            <main class="{{ page.content_class | default: 'content' }}">
                 {{ content }}
-            </div>
+            </main>
             {% include footer.html %}
             {% include sidebar.html %}
         </div>
+        {% include whatsapp-widget.html %}
     </body>
 </html>
