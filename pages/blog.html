@@ -14,6 +14,48 @@ custom_css:
     <p>Explore practical study advice, moments from the OPUS community and the people behind the progress.</p>
 </section>
 
+<section class="blog-articles" aria-labelledby="blog-articles-heading">
+    <div class="blog-section-heading">
+        <p class="blog-eyebrow">Learning resources</p>
+        <h2 id="blog-articles-heading">Latest articles</h2>
+        <p>Practical ideas to help students learn with more confidence.</p>
+    </div>
+
+    {% if site.posts.size > 0 %}
+    <div class="article-grid">
+        {% for post in site.posts %}
+        <article class="article-card">
+            <a class="article-card-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+                {% if post.cover_image %}
+                <img src="{{ post.cover_image | relative_url }}" alt="" width="1000" height="1000" loading="lazy">
+                {% endif %}
+            </a>
+            <div class="article-card-content">
+                {% if post.categories and post.categories != empty %}
+                <p class="article-card-category">{{ post.categories | first }}</p>
+                {% endif %}
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p class="article-card-summary">{{ post.description | default: post.excerpt | strip_html |
+                    truncatewords: 28 }}</p>
+                <p class="article-card-meta">
+                    <span>{{ post.author }}</span>
+                    <span aria-hidden="true">&middot;</span>
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+                </p>
+                <a class="article-card-link" href="{{ post.url | relative_url }}">Read article <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="blog-empty-state">
+        <h3>New articles are coming soon</h3>
+        <p>Check back shortly for study tips and stories from the OPUS community.</p>
+    </div>
+    {% endif %}
+</section>
+
 <section class="blog-feed" aria-labelledby="blog-feed-heading">
     <div class="blog-feed-heading">
         <p class="blog-eyebrow">Latest from Instagram</p>

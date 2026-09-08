@@ -5,7 +5,7 @@
         {% include bg-squiggles.html %}
         {% include header.html %}
         <div class="wrapper">
-            <main class="{{ page.content_class | default: 'content' }}">
+            <main class="{% if page.layout == 'post' %}post-content{% else %}{{ page.content_class | default: 'content' }}{% endif %}">
                 {{ content }}
             </main>
             {% include footer.html %}

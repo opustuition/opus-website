@@ -7,6 +7,7 @@ description: >-
 url: "https://opustuition.com"
 baseurl: ""
 timezone: Asia/Singapore
+permalink: /blog/:title/
 
 exclude:
   - Gemfile
