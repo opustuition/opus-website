@@ -1,0 +1,56 @@
+---
+layout: default
+content_class: post-content
+custom_css:
+- blog
+---
+
+<article class="post">
+    <nav class="post-breadcrumb" aria-label="Breadcrumb">
+        <a class="post-back-link" href="{{ '/blog/' | relative_url }}">
+            <span class="post-back-icon" aria-hidden="true">&larr;</span>
+            <span>All articles</span>
+        </a>
+    </nav>
+
+    <header class="post-header">
+        {% if page.categories and page.categories != empty %}
+        <p class="post-category">{{ page.categories | first }}</p>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        <p class="post-description">{{ page.description }}</p>
+        <div class="post-byline">
+            <span class="post-author-mark" aria-hidden="true">
+                <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="">
+            </span>
+            <p class="post-meta">
+                <span class="post-author">{{ page.author }}</span>
+                <span class="post-meta-details">
+                    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time>
+                    <span aria-hidden="true">&middot;</span>
+                    <span>{{ content | number_of_words | divided_by: 180 | plus: 1 }} min read</span>
+                </span>
+            </p>
+        </div>
+    </header>
+
+    {% if page.cover_image %}
+    <figure class="post-cover">
+        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.cover_image_alt | default: page.title | escape }}"
+            width="1536" height="1024">
+    </figure>
+    {% endif %}
+
+    <div class="post-body">
+        {{ content }}
+    </div>
+
+    <footer class="post-footer">
+        <div>
+            <p class="post-footer-label">Keep learning</p>
+            <h2>More ideas for confident learning</h2>
+        </div>
+        <a class="post-footer-link" href="{{ '/blog/' | relative_url }}">Explore all articles <span
+                aria-hidden="true">&rarr;</span></a>
+    </footer>
+</article>

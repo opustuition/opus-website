@@ -36,6 +36,10 @@
         }
     </style>
 
+    {% if page.layout == 'post' %}
+    <link rel="stylesheet" href="{{ '/assets/css/pages/blog.css' | relative_url }}" media="screen" type="text/css">
+    {% endif %}
+
     {% if page.custom_css %}
     {% for stylesheet in page.custom_css %}
     <link rel="stylesheet" href="{{ '/assets/css/pages/' | append: stylesheet | append: '.css' | relative_url }}" media="screen" type="text/css">

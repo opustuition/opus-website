@@ -1,0 +1,81 @@
+# Production CMS configuration. Netlify provides the OAuth exchange while
+# GitHub remains the source of truth for repository authorization.
+local_backend: true
+backend:
+  name: github
+  repo: opustuition/opus-website
+  branch: main
+  # Netlify is used for authentication only; GitHub Pages serves the website.
+  site_domain: calm-semolina-dc21f4.netlify.app
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  # Required because the repository is private.
+  auth_scope: repo
+publish_mode: simple
+
+media_folder: "assets/images/blog"
+public_folder: "/assets/images/blog"
+
+collections:
+  - name: "posts"
+    label: "Articles"
+    label_singular: "Article"
+    description: "Create and manage OPUS blog articles. Leave Published off to keep a draft out of the public site."
+    folder: "_posts"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "post"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Use a clear, reader-friendly headline."
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        hint: "A short summary used in search results and article listings."
+      - label: "Publication date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "OPUS Tuition"
+      - label: "Category"
+        name: "categories"
+        widget: "list"
+        min: 1
+        max: 1
+        field:
+          label: "Category"
+          name: "category"
+          widget: "string"
+          hint: "For example: Study Tips, Parent Guide, or OPUS News."
+      - label: "Cover image"
+        name: "cover_image"
+        widget: "image"
+        required: true
+        hint: "Upload a landscape image. It will be saved in assets/images/blog."
+      - label: "Cover image description"
+        name: "cover_image_alt"
+        widget: "string"
+        required: true
+        hint: "Describe the image for readers using screen readers."
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: false
+        hint: "Turn on only when the article is ready for visitors."
+      - label: "Article"
+        name: "body"
+        widget: "markdown"
