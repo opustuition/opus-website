@@ -1,6 +1,5 @@
 # Production CMS configuration. Netlify provides the OAuth exchange while
 # GitHub remains the source of truth for repository authorization.
-local_backend: true
 backend:
   name: github
   repo: opustuition/opus-website
