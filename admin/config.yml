@@ -1,9 +1,16 @@
-# Local-only CMS configuration. The Decap proxy writes to this checkout while
-# developing; production authentication is intentionally not configured yet.
-backend:
-  name: git-gateway
-
+# Production CMS configuration. Netlify provides the OAuth exchange while
+# GitHub remains the source of truth for repository authorization.
 local_backend: true
+backend:
+  name: github
+  repo: opustuition/opus-website
+  branch: main
+  # Netlify is used for authentication only; GitHub Pages serves the website.
+  site_domain: calm-semolina-dc21f4.netlify.app
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  # Required because the repository is private.
+  auth_scope: repo
 publish_mode: simple
 
 media_folder: "assets/images/blog"
