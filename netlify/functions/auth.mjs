@@ -38,6 +38,7 @@ export default async request => {
     // Decap first verifies that the popup is the expected OAuth origin. Only
     // navigate to GitHub after its parent window completes that handshake.
     const authorizationUrl = JSON.stringify(authorizeUrl.toString());
+    const cmsOrigin = JSON.stringify(process.env.CMS_ORIGIN || 'https://opustuition.com');
     const body = `<body><p>Opening GitHub login…</p><script>
       (() => {
         const authorizationUrl = ${authorizationUrl};
@@ -53,7 +54,7 @@ export default async request => {
           window.location.replace(authorizationUrl);
         };
         window.addEventListener('message', receiveHandshake);
-        window.opener.postMessage('authorizing:github', window.location.origin);
+        window.opener.postMessage('authorizing:github', ${cmsOrigin});
       })();
     </script></body>`;
 
