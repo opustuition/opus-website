@@ -45,9 +45,14 @@ export default async request => {
           document.body.textContent = 'This login window must be opened from the OPUS CMS.';
           return;
         }
-        window.addEventListener('message', event => {
-          if (event.data === 'authorizing:github') window.location.replace(authorizationUrl);
-        }, { once: true });
+        // Do not use a one-time listener here: browser extensions can emit an
+        // unrelated message before Decap completes its handshake.
+        const receiveHandshake = event => {
+          if (event.data !== 'authorizing:github') return;
+          window.removeEventListener('message', receiveHandshake);
+          window.location.replace(authorizationUrl);
+        };
+        window.addEventListener('message', receiveHandshake);
         window.opener.postMessage('authorizing:github', window.location.origin);
       })();
     </script></body>`;
