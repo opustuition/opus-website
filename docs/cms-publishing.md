@@ -15,7 +15,7 @@ Do not create visitor accounts for the CMS and do not expose `/admin/` in naviga
 
 ## Hosting-provider setup
 
-Configure the Netlify GitHub OAuth provider for `calm-semolina-dc21f4.netlify.app`. Create a GitHub OAuth App and use `https://api.netlify.com/auth/done` as its callback URL, then add the app's client ID and client secret under the project's GitHub authentication provider settings. Keep the secret in the hosting dashboard; it must never be committed. Netlify is used only for the OAuth exchange; GitHub Pages remains the public host.
+Configure the Netlify OAuth proxy described in [netlify-oauth-proxy.md](netlify-oauth-proxy.md). Add the GitHub OAuth App client ID and secret as Netlify Function environment variables; keep the secret in Netlify and never commit it. Netlify is used only for the OAuth exchange; GitHub Pages remains the public host.
 
 Each CMS publish creates a commit to `main`. GitHub Pages rebuilds and deploys that commit through the repository's existing Pages workflow.
 

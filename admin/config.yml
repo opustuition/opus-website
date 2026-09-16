@@ -4,9 +4,9 @@ backend:
   name: github
   repo: opustuition/opus-website
   branch: main
-  # Netlify is used for authentication only; GitHub Pages serves the website.
+  # Netlify hosts the OAuth functions; GitHub Pages serves the website.
   site_domain: calm-semolina-dc21f4.netlify.app
-  base_url: https://api.netlify.com
+  base_url: https://calm-semolina-dc21f4.netlify.app
   auth_endpoint: auth
   # Required because the repository is private.
   auth_scope: repo

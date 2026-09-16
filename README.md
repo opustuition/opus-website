@@ -22,7 +22,7 @@ Only approved administrators should have GitHub write access to this repository.
 This needs to be completed by an owner of both the GitHub repository and the Netlify OAuth project. The site configuration is already set for this route.
 
 1. Create a Netlify project at `calm-semolina-dc21f4.netlify.app`. It is used only for authentication; do not point `opustuition.com` at Netlify.
-2. In Netlify's OAuth/authentication settings, install a GitHub authentication provider. Create the GitHub OAuth app with the callback URL `https://api.netlify.com/auth/done`, and store its client ID and secret in Netlify only — never in this repository.
+2. Follow [the Netlify OAuth proxy setup](docs/netlify-oauth-proxy.md): set the GitHub OAuth App callback to `https://calm-semolina-dc21f4.netlify.app/callback` and add its client ID and secret as Netlify Function environment variables. Never commit the secret.
 3. In GitHub, give publishing access only to the approved administrator team or accounts. Protect `main` by restricting pushes to that same administrator team, and do not give write access to visitor accounts. Because Decap publishes direct commits to `main`, do not require pull requests for those publishers unless they are explicitly included in the rule's bypass list.
 4. Sign in at `https://opustuition.com/admin/` with an approved GitHub account. Create a small test post and publish it. Confirm the new commit lands on `main`, the GitHub Pages deployment succeeds, and the post appears on the live blog. Delete the test post afterward if it is not intended to remain live.
 
