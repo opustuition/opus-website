@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stay Tuned for Series 2!
+title: Stay Tuned for Series 2!!
 description: Keep a lookout on Series 2!
 date: 2026-09-08
 author: OPUS Tuition
