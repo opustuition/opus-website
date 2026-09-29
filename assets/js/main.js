@@ -1,6 +1,7 @@
 document.documentElement.classList.add("js");
 
 document.addEventListener("DOMContentLoaded", () => {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const sidebar = document.querySelector(".sidebar");
   const sidebarBackdrop = document.querySelector(".sidebar-wrapper");
   const openButton = document.querySelector(".menu-open");
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".testimonial-scroll").forEach((scroller) => {
     const originalTestimonials = Array.from(scroller.children);
-    if (!originalTestimonials.length) return;
+    if (!originalTestimonials.length || reduceMotion) return;
 
     const addTestimonialSet = () => {
       originalTestimonials.forEach((testimonial) => {
@@ -42,58 +43,83 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    addTestimonialSet();
-    const loopAt = scroller.scrollWidth / 2;
+    const loopAt = scroller.scrollWidth;
 
     while (scroller.scrollWidth < scroller.clientWidth + loopAt) {
       addTestimonialSet();
     }
 
-    let isPaused = false;
+    let isInteracting = false;
+    let isVisible = false;
+    let frameId;
     let lastFrame;
 
     scroller.scrollLeft = 0;
 
-    const pause = () => {
-      isPaused = true;
-    };
-
-    const resume = () => {
-      isPaused = false;
+    const stop = () => {
+      if (frameId) cancelAnimationFrame(frameId);
+      frameId = undefined;
       lastFrame = undefined;
     };
 
+    const canAnimate = () => isVisible && !isInteracting && !document.hidden && loopAt > 0;
+
+    const start = () => {
+      if (!frameId && canAnimate()) frameId = requestAnimationFrame(autoScroll);
+    };
+
     ["pointerdown", "focusin", "touchstart"].forEach((eventName) => {
-      scroller.addEventListener(eventName, pause, { passive: true });
+      scroller.addEventListener(eventName, () => {
+        isInteracting = true;
+        stop();
+      }, { passive: true });
     });
     ["pointerup", "focusout", "touchend", "touchcancel"].forEach((eventName) => {
-      scroller.addEventListener(eventName, resume, { passive: true });
+      scroller.addEventListener(eventName, () => {
+        isInteracting = false;
+        start();
+      }, { passive: true });
     });
 
     const autoScroll = (timestamp) => {
-      if (!isPaused && !reduceMotion && loopAt > 0) {
-        if (lastFrame) {
-          const distance = (timestamp - lastFrame) * .04;
-          const nextPosition = scroller.scrollLeft + distance;
+      frameId = undefined;
+      if (!canAnimate()) return;
 
-          if (nextPosition >= loopAt) {
-            scroller.scrollLeft = nextPosition - loopAt;
-          } else {
-            scroller.scrollLeft = nextPosition;
-          }
+      if (lastFrame) {
+        const distance = (timestamp - lastFrame) * .04;
+        const nextPosition = scroller.scrollLeft + distance;
+
+        if (nextPosition >= loopAt) {
+          scroller.scrollLeft = nextPosition - loopAt;
+        } else {
+          scroller.scrollLeft = nextPosition;
         }
-        lastFrame = timestamp;
       }
+      lastFrame = timestamp;
 
-      requestAnimationFrame(autoScroll);
+      frameId = requestAnimationFrame(autoScroll);
     };
 
-    requestAnimationFrame(autoScroll);
+    if ("IntersectionObserver" in window) {
+      const carouselObserver = new IntersectionObserver(([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) start();
+        else stop();
+      }, { threshold: 0.1 });
+
+      carouselObserver.observe(scroller);
+    } else {
+      isVisible = true;
+      start();
+    }
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop();
+      else start();
+    });
   });
 
   const revealElements = document.querySelectorAll(".value-prop, .guarantee, .feature-img, .tutor-content section, .programme-content > section, .blog-content section");
   const counters = document.querySelectorAll("[data-counter-target]");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const showElement = (element) => element.classList.add("intersecting");
 
