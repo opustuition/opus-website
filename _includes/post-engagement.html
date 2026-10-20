@@ -1,0 +1,37 @@
+<section class="post-engagement" aria-labelledby="discussion-heading"
+    data-post-engagement data-post-id="{{ page.url | escape }}"
+    data-share-url="{{ page.url | absolute_url | escape }}" data-title="{{ page.title | escape }}"
+    data-supabase-url="{{ site.supabase.url | escape }}"
+    data-supabase-key="{{ site.supabase.publishable_key | escape }}"
+    data-turnstile-key="{{ site.supabase.turnstile_site_key | escape }}">
+    <div class="post-engagement-actions">
+        <button type="button" data-like aria-pressed="false" disabled>
+            <span aria-hidden="true">&#9825;</span> <span data-like-label>Like</span>
+            <span data-like-count></span>
+        </button>
+        <a href="#discussion-heading">Leave a comment</a>
+        <button type="button" data-share hidden>Share article</button>
+        <a href="https://wa.me/?text={{ page.url | absolute_url | url_encode }}" target="_blank"
+            rel="noopener noreferrer">WhatsApp</a>
+    </div>
+    <div data-share-fallback hidden>
+        <label for="article-share-url">Copy this article link</label>
+        <input id="article-share-url" type="url" readonly value="{{ page.url | absolute_url | escape }}">
+    </div>
+    <p data-share-status role="status"></p>
+    <h2 id="discussion-heading" tabindex="-1">Join the conversation</h2>
+    <p>Comment as a guest. Your name and comment will be public once approved. Please keep personal contact details private.</p>
+    <p data-engagement-status role="status">Likes and comments are not available yet.</p>
+    <noscript><p>Enable JavaScript to like articles and read or leave comments. You can share using WhatsApp above.</p></noscript>
+    <div data-captcha hidden></div>
+    <form data-comment-form hidden>
+        <label for="comment-name">Display name</label>
+        <input id="comment-name" name="display_name" autocomplete="nickname" maxlength="60" required>
+        <label for="comment-body">Your comment</label>
+        <textarea id="comment-body" name="body" rows="4" maxlength="2000" required></textarea>
+        <button type="submit">Submit for approval</button>
+    </form>
+    <div data-comments aria-label="Approved comments"></div>
+    <button type="button" data-load-comments hidden>Load more comments</button>
+</section>
+<script src="{{ '/assets/js/blog-engagement.js' | relative_url }}" defer></script>

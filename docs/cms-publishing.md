@@ -34,5 +34,6 @@ Each CMS publish creates a commit to `main`. GitHub Pages rebuilds and deploys t
 2. Open **Articles**, choose **New Article**, and complete every required field, including cover-image alt text.
 3. Check the preview, then select **Publish**. The editor commits the article and any uploaded image to `main`.
 4. Wait for the hosting deployment to finish, then open the live article and verify its title, image, links, and mobile layout.
+5. If Supabase engagement is enabled, [register the article route](blog-engagement.md#publishing-articles) to enable guest likes and comments.
 
 For a correction, edit and publish the existing article, then repeat the final live-site check.
