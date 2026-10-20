@@ -6,6 +6,7 @@
   --tutor-green: #0aa15d;
   --tutor-paper: #eff5ff;
   --tutor-white: #fff;
+  --tutor-orange: #d8712b;
   --tutor-radius: 1.35rem;
   --tutor-shadow: 0 24px 60px rgba(14, 38, 91, .18);
 }
@@ -195,7 +196,6 @@
 
 /* Community */
 .tutor-experiences {
-  background: var(--tutor-paper);
   border-radius: calc(var(--tutor-radius) + .2rem);
   box-shadow: var(--tutor-shadow);
   color: var(--tutor-ink);
@@ -203,7 +203,7 @@
 }
 
 .experiences-heading {
-  background: var(--tutor-navy);
+  background: rgba(19, 42, 94, .55);
   color: #fff;
   padding: clamp(2.4rem, 6vw, 4.5rem) 1.5rem;
   text-align: center;
@@ -217,6 +217,7 @@
 }
 
 .experience-list {
+  background: var(--tutor-paper);
   display: grid;
 }
 
@@ -248,7 +249,7 @@
 
 /* Tutor qualities */
 .tutor-fit {
-  background: var(--tutor-yellow);
+  background: var(--tutor-orange);
   border-radius: calc(var(--tutor-radius) + .2rem);
   color: var(--tutor-ink);
   padding: clamp(2.4rem, 6vw, 4.5rem) 1.5rem;
