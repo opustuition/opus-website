@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blueprint to Do Well in Math (Primary School)
+title: Blueprint to Do Well in Math (Primary School)!
 description: "Here is something not enough people say out loud: doing well in
   primary school Math in Singapore is genuinely not as hard as it is made out to
   be. Most questions are repetitive, and if you understand the blueprint and
