@@ -576,6 +576,80 @@
   background: #10224d;
 }
 
+/* Guest discussion */
+.post-engagement {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: var(--blog-navy);
+  margin: 2rem auto 0;
+  max-width: 950px;
+  padding: clamp(1.25rem, 5vw, 3rem);
+  overflow-wrap: anywhere;
+}
+
+.post-engagement [hidden] { display: none !important; }
+
+.post-engagement-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.post-engagement a,
+.post-engagement a:visited { color: var(--blog-blue); }
+
+.post-engagement button {
+  background: var(--blog-yellow);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--blog-navy);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  min-height: 44px;
+  padding: .65rem 1rem;
+}
+
+.post-engagement button[aria-pressed="true"] {
+  background: var(--blog-navy);
+  color: #fff;
+}
+
+.post-engagement button:disabled { cursor: wait; opacity: .6; }
+
+.post-engagement :is(button, a, input, textarea):focus-visible {
+  outline: 3px solid var(--blog-blue);
+  outline-offset: 3px;
+}
+
+.post-engagement h2 { font-family: "LoRes", sans-serif; margin: 0 0 1rem; }
+.post-engagement p { max-width: none; padding: .5rem 0; line-height: 1.6; }
+.post-engagement [role="status"]:empty { display: none; }
+.post-engagement form { display: grid; gap: .6rem; margin: 1.5rem 0; }
+.post-engagement label { font-weight: 650; }
+
+.post-engagement input,
+.post-engagement textarea {
+  background: var(--blog-pale-blue);
+  border: 1px solid #8798ba;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: var(--blog-navy);
+  font: inherit;
+  min-width: 0;
+  padding: .8rem;
+  width: 100%;
+}
+
+.post-engagement textarea { resize: vertical; }
+.post-engagement form button { justify-self: start; margin-top: .5rem; }
+.post-comment { border-top: 1px solid #d4def0; padding: 1.25rem 0; }
+.post-comment time { display: block; font-size: .8rem; margin-top: .3rem; }
+.post-comment p { white-space: pre-wrap; }
+
 /* Page reveal motion */
 .js .blog-content section {
   opacity: 0;

@@ -59,6 +59,10 @@ _config.yml              Jekyll site configuration
 
 Page source files can live under `pages/` because their front matter preserves the public routes. Contact details and WhatsApp URLs should be changed in `_data/contact.yml`.
 
+## Blog likes, comments and sharing
+
+Articles include sharing controls and an optional Supabase layer for guest likes and moderated comments. Follow [the setup and moderation guide](docs/blog-engagement.md) to create the database, enable guest sessions and set the public project configuration. Sharing works before Supabase is configured.
+
 ## Production build
 
 ```powershell

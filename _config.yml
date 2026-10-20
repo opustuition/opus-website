@@ -9,7 +9,21 @@ baseurl: ""
 timezone: Asia/Singapore
 permalink: /blog/:title/
 
+# Browser-safe settings only. Never put a secret/service_role key here.
+supabase:
+  url: "https://cuhkdtqchiiyqjzzxlrh.supabase.co"
+  publishable_key: "sb_publishable_icy0JLJWc76rXKuEDsez6A_DCg1RbuD"
+  turnstile_site_key: "0x4AAAAAAFc9it2dt_sxE_f2"
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - supabase
+  - tests
+  - docs
+  - node_modules
+  - package.json
+  - package-lock.json
+  - netlify
+  - netlify.toml
